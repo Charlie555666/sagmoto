@@ -1,20 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
-Disallow: /node_modules/
-Disallow: /.git/
+Disallow: /.mirror_raw/
 
 Sitemap: https://sagmoto-trucks.com/sitemap.xml
-
-# Crawl-delay for polite bots
-Crawl-delay: 5
-
-# Google-specific
-User-agent: Googlebot
-Allow: /
-Disallow: /admin/
-
-# Bing-specific
-User-agent: Bingbot
-Allow: /
-Disallow: /admin/
