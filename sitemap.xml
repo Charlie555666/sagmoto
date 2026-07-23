@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Primary Pages -->
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:html="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://sagmoto-trucks.com/index.html</loc>
     <lastmod>2026-07-23</lastmod>
@@ -27,12 +26,6 @@
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://sagmoto-trucks.com/contact.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sagmoto-trucks.com/service.html</loc>
@@ -69,14 +62,14 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Heavy Duty Trucks -->
+  
   <url>
     <loc>https://sagmoto-trucks.com/x1s.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sagmoto-trucks.com/x1s.html"/>
+    <html:link rel="alternate" hreflang="en" href="https://sagmoto-trucks.com/x1s.html" />
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sagmoto-trucks.com/x1s.html"/>
+    <html:link rel="alternate" hreflang="en" href="https://sagmoto-trucks.com/x1s.html" />
   </url>
   <url>
     <loc>https://sagmoto-trucks.com/x3s.html</loc>
@@ -111,7 +104,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Medium Duty Truck Pages -->
+  
   <url>
     <loc>https://sagmoto-trucks.com/x6.html</loc>
     <lastmod>2026-07-23</lastmod>
@@ -125,7 +118,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Light Duty Truck Pages -->
+  
   <url>
     <loc>https://sagmoto-trucks.com/x9.html</loc>
     <lastmod>2026-07-23</lastmod>
@@ -140,12 +133,6 @@
   </url>
   <url>
     <loc>https://sagmoto-trucks.com/i9.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sagmoto-trucks.com/x5.html</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -163,36 +150,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Light Duty Trucks -->
-  <url>
-    <loc>https://sagmoto-trucks.com/x9.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://sagmoto-trucks.com/i5.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://sagmoto-trucks.com/i9.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://sagmoto-trucks.com/e9.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Product Category Pages -->
+  
   <url>
     <loc>https://sagmoto-trucks.com/qyc.html</loc>
     <lastmod>2026-07-23</lastmod>
@@ -237,7 +195,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Legal Pages -->
+  
   <url>
     <loc>https://sagmoto-trucks.com/privacy.html</loc>
     <lastmod>2026-07-23</lastmod>
@@ -252,7 +210,7 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- News Pages -->
+  
   <url>
     <loc>https://sagmoto-trucks.com/news_list/1.html</loc>
     <lastmod>2026-07-23</lastmod>
@@ -302,7 +260,7 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- Service Detail Pages -->
+  
   <url>
     <loc>https://sagmoto-trucks.com/service_list/1674411714944516096.html</loc>
     <lastmod>2026-07-23</lastmod>
@@ -331,4 +289,4 @@
     <priority>0.5</priority>
   </url>
 
-</urlset>
+<url><loc>https://sagmoto-trucks.com/zxc-x3s.html</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>https://sagmoto-trucks.com/zxc-e3.html</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>https://sagmoto-trucks.com/zxc-x6.html</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url><loc>https://sagmoto-trucks.com/sagmoto-central-asia.html</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url></urlset>
