@@ -4,3 +4,4 @@ Disallow: /admin/
 Disallow: /.mirror_raw/
 
 Sitemap: https://sagmoto-trucks.com/sitemap.xml
+Sitemap: https://sagmoto-trucks.com/sitemap-images.xml
