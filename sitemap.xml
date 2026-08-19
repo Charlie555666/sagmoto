@@ -326,6 +326,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sagmoto-trucks.com/blog/x1-dump-truck-guide.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://sagmoto-trucks.com/blog/x1s-mining-truck.html</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -450,5 +456,65 @@
     <lastmod>2026-08-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://sagmoto-trucks.com/blog/x7-medium-duty-deep-dive.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sagmoto-trucks.com/blog/e9-light-duty-deep-dive.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sagmoto-trucks.com/blog/x9-municipal-fleet-operations.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sagmoto-trucks.com/blog/x9s-vs-x9-comparison.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sagmoto-trucks.com/blog/e3-max-southeast-asia-market.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sagmoto-trucks.com/blog/x6s-buying-guide.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sagmoto-trucks.com/blog/i5-electric-truck-deep-dive.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sagmoto-trucks.com/blog/z3-maintenance-guide.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sagmoto-trucks.com/blog/x3s-mining-quarry-operations.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sagmoto-trucks.com/blog/e3-africa-market-analysis.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
