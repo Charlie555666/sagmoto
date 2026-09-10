@@ -12,8 +12,11 @@
 - [New Energy Vehicles](https://sagmoto-trucks.com/new-energy.html): Electric trucks including i5 and i9 models
 - [SAGMOTO X3s](https://sagmoto-trucks.com/x3s.html): X3s tractor truck 6x4, dump truck, cargo truck, mixer truck - Cummins ISME 420HP engine, 12JSD200T transmission
 - [SAGMOTO E3](https://sagmoto-trucks.com/e3.html): E3 tractor truck 6x4 - Yuchai YC6MK 400HP engine, 12JSD200T transmission
-- [SAGMOTO E1st](https://sagmoto-trucks.com/e1st.html): E1st flagship tractor truck 560HP - Cummins engine, Eaton AMT transmission
-- [SAGMOTO Z3](https://sagmoto-trucks.com/z3.html): Z3 new generation tractor truck 520HP - intelligent electronic system
+- [SAGMOTO E1st](https://sagmoto-trucks.com/e1st.html): E1st flagship tractor truck 560HP - Cummins Z14 engine, Fast 16JSD240T 16-speed transmission
+- [SAGMOTO Z3](https://sagmoto-trucks.com/z3.html): Z3 new generation tractor truck 520HP - Cummins M13 engine, 12JSD240TA transmission, intelligent electronic system
+- [Dump Trucks](https://sagmoto-trucks.com/zxc.html): SAGMOTO heavy duty dump trucks 6x4 8x4 - mining tipper, U-type, grid body, 25-40T payload
+- [Tractor Trucks](https://sagmoto-trucks.com/qyc.html): SAGMOTO tractor trucks 4x2 6x4 - semi trailer prime mover for long-haul logistics
+- [Cargo Trucks](https://sagmoto-trucks.com/zhc.html): SAGMOTO cargo trucks 4x2 6x4 8x4 - flatbed, box van, stake, dropside body options
 - [SAGMOTO X6](https://sagmoto-trucks.com/x6.html): X6 dump truck, cargo truck, mixer, sprinkler - 4x2/6x4/8x4
 - [SAGMOTO X7](https://sagmoto-trucks.com/x7.html): X7 cargo truck, flatbed, concrete mixer - medium duty
 - [SAGMOTO X9](https://sagmoto-trucks.com/x9.html): X9 light truck, dump, cargo, tow, sweeper - 4x2/4x4

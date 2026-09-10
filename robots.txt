@@ -4,5 +4,31 @@ Disallow: /mirror/
 Disallow: /admin/
 Disallow: /.mirror_raw/
 
+# AI crawlers welcome (GEO)
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Bytespider
+Allow: /
+
 Sitemap: https://sagmoto-trucks.com/sitemap.xml
 Sitemap: https://sagmoto-trucks.com/sitemap-images.xml
