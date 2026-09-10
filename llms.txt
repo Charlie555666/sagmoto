@@ -29,6 +29,14 @@
 - [Off-Road 4x4](https://sagmoto-trucks.com/off-road-4x4.html): Mining dump, construction, all-terrain trucks
 - [Central Asia](https://sagmoto-trucks.com/sagmoto-central-asia.html): SAGMOTO trucks for Tajikistan, Kyrgyzstan, Uzbekistan, Kazakhstan
 
+## Ultimate Guides (2026)
+
+- [Dump Truck Ultimate Guide](https://sagmoto-trucks.com/dump-truck-guide.html): Complete SAGMOTO tipper lineup - X3000/X3s 6x4 8x4 mining tipper, E3 25T construction dump, X6 medium, X9 light. Engines, transmissions, body volumes, FOB prices (USD 18,000-68,000) and import process
+- [Tractor Truck Ultimate Guide](https://sagmoto-trucks.com/tractor-truck-guide.html): X3000/X3s 6x4 (Cummins ISME 420 + Fast 12JSD200T), E1st flagship (Z14 560 + 16JSD240T), Z3 (M13 520 + 12JSD240TA), X6 regional - GCW 20t to 80t+, FOB prices and shipping
+- [Cargo Truck Ultimate Guide](https://sagmoto-trucks.com/cargo-truck-guide.html): E3 MAX national distribution, E9 urban, X9 last-mile, X3s long-haul - box, curtain-side, flatbed and reefer bodies (Carrier/Thermo King), payload classes 3-25t
+- [Electric Truck Ultimate Guide](https://sagmoto-trucks.com/new-energy-ev-truck-guide.html): i9 heavy EV (282-423 kWh, 250-350 km), i5 urban EV (100-141 kWh, 200-270 km), E9 EV light - charging strategy (AC 22kW/DC 120kW), TCO break-even 2.5-4 years vs diesel
+- [Shacman X3000 Family Ultimate Guide](https://sagmoto-trucks.com/shacman-x3000-guide.html): Full X3000 family map - tractor/dump/cargo variants, Shacman vs SAGMOTO brand clarification (same Xi'an factories), Cummins ISME 345-420 + Yuchai YC6MK 400 engines, 2026 FOB prices
+
 ## Key Pages
 
 - [Home](https://sagmoto-trucks.com/)
