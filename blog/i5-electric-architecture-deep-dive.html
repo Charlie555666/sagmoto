@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Engineering deep dive into SAGMOTO i5 electric truck: 98kWh LFP battery pack architecture, PMSM motor design, BMS control strategy, charging protocol, thermal management, and vehicle control unit integration.">
+    <meta name="keywords" content="SAGMOTO i5, i5 electric architecture, LFP battery 98kWh, PMSM motor, BMS control, i5 battery pack, i5 motor design, i5 charging protocol, thermal management EV, vehicle control unit, i5 deep dive">
+    <meta property="og:title" content="SAGMOTO i5 Electric Truck Architecture: Battery, Motor, and Control System Deep Dive 2026">
+    <meta property="og:description" content="Engineering deep dive into SAGMOTO i5 electric truck: 98kWh LFP battery pack architecture, PMSM motor design, BMS control strategy, charging protocol, thermal management, and vehicle control unit integration.">
+    <meta property="og:image" content="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="geo.region" content="CN"/>
+    <meta name="geo.placename" content="Xi'an, Shaanxi, China"/>
+    <meta name="geo.position" content="34.3416;108.9398"/>
+    <link rel="canonical" href="https://sagmoto-trucks.com/blog/i5-electric-architecture-deep-dive.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="icon" href="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <title>SAGMOTO i5 Electric Truck Architecture: Battery, Motor, and Control System Deep Dive 2026 | SAGMOTO Blog</title>
+    <style>
+        .article-container { max-width: 800px; margin: 80px auto 40px; padding: 0 20px; }
+        .article-header { margin-bottom: 40px; }
+        .article-header h1 { font-size: 32px; font-weight: 700; color: #1a1a2e; line-height: 1.3; margin-bottom: 16px; }
+        .article-meta { font-size: 13px; color: #999; display: flex; gap: 16px; flex-wrap: wrap; }
+        .article-body { font-size: 16px; line-height: 1.8; color: #333; }
+        .article-body h2 { font-size: 24px; font-weight: 700; color: #1a1a2e; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #f0f2f5; }
+        .article-body h3 { font-size: 20px; font-weight: 600; color: #333; margin: 28px 0 12px; }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { margin: 12px 0 20px 24px; }
+        .article-body li { margin-bottom: 8px; }
+        .article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+        .article-body table th { background: #1a1a2e; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .article-body table td { padding: 10px 14px; border-bottom: 1px solid #e8e8e8; }
+        .article-body table tr:nth-child(even) td { background: #f9fafb; }
+        .article-cta { background: #0f3460; color: #fff; padding: 32px; border-radius: 12px; text-align: center; margin: 40px 0; }
+        .article-cta h3 { color: #fff; margin-bottom: 12px; font-size: 20px; }
+        .article-cta p { color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+        .article-cta a { display: inline-block; background: #fff; color: #0f3460; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .key-point { background: #f0f4ff; border-left: 4px solid #0f3460; padding: 16px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        @media (max-width: 768px) { .article-header h1 { font-size: 24px; } .article-body { font-size: 15px; } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org", "@type": "Article",
+      "headline": "SAGMOTO i5 Electric Truck Architecture: Battery, Motor, and Control System Deep Dive 2026",
+      "description": "Engineering deep dive into SAGMOTO i5 electric truck: 98kWh LFP battery pack architecture, PMSM motor design, BMS control strategy, charging protocol, thermal management, and vehicle control unit integration.",
+      "author": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "url": "https://sagmoto-trucks.com/" },
+      "publisher": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "logo": { "@type": "ImageObject", "url": "https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png" } },
+      "datePublished": "2026-09-11", "dateModified": "2026-09-11",
+      "mainEntityOfPage": { "@type": "WebPage", "id": "https://sagmoto-trucks.com/blog/i5-electric-architecture-deep-dive.html" }
+    }
+    </script>
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="logo"><img src="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png" alt="SAGMOTO" style="height:40px;"></a>
+        <nav class="main-nav"><a href="../index.html">Home</a><a href="../products.html">Products</a><a href="index.html">Blog</a><a href="../contact.html">Contact</a></nav>
+    </div>
+</header>
+
+<div class="article-container">
+    <div class="article-header">
+        <h1>SAGMOTO i5 Electric Truck Architecture: Battery, Motor, and Control System Deep Dive 2026</h1>
+        <div class="article-meta"><span>2026-09-11</span><span>SAGMOTO Blog</span><span>Shaanxi Fenghan Trading Co., Ltd.</span></div>
+    </div>
+    <div class="article-body">
+
+<h2>Electric Vehicle Architecture Overview</h2>
+
+<p>The SAGMOTO i5 electric truck represents a fully integrated electric vehicle architecture designed from the ground up for commercial fleet operations. Unlike conversion-based electric trucks that adapt diesel chassis to electric powertrains, the i5's platform is engineered as an electric vehicle with the battery pack integrated into the chassis frame, the motor driving the rear axle through a dedicated reduction gearbox, and a vehicle control unit (VCU) coordinating all subsystems. This deep dive examines the i5's battery, motor, control, and thermal management systems. For the full <a href="../new-energy.html">SAGMOTO new energy electric trucks</a> range, visit our product page.</p>
+
+<div class="key-point">The SAGMOTO i5 uses a 98 kWh LFP (LiFePO4) battery pack with 3,000+ deep cycle life, a 185 kW permanent magnet synchronous motor (PMSM) with 1,100 Nm peak torque, and a 2-speed automated gearbox. This architecture delivers a 200-220 km real-world range at full 12-tonne payload, positioning the i5 as a medium-duty urban distribution platform.</div>
+
+<h2>Battery Pack Architecture</h2>
+
+<table>
+<thead><tr><th>Parameter</th><th>Specification</th><th>Engineering Notes</th></tr></thead>
+<tbody>
+<tr><td>Chemistry</td><td>LiFePO4 (LFP)</td><td>Safe, stable, long cycle life</td></tr>
+<tr><td>Nominal Voltage</td><td>538 V DC</td><td>High-voltage for efficiency</td></tr>
+<tr><td>Nominal Capacity</td><td>182 Ah</td><td>98 kWh total energy</td></tr>
+<tr><td>Usable Energy</td><td>88 kWh (90%)</td><td>10% reserved for longevity</td></tr>
+<tr><td>Cell Configuration</td><td>168s 2p (336 cells)</td><td>3.2V per cell, LFP</td></tr>
+<tr><td>Module Count</td><td>14 modules x 12 cells</td><td>Modular for service</td></tr>
+<tr><td>Pack Weight</td><td>850 kg</td><td>Energy density 115 Wh/kg</td></tr>
+<tr><td>Cooling</td><td>Liquid (glycol-water)</td><td>Active thermal management</td></tr>
+<tr><td>Enclosure Rating</td><td>IP67</td><td>Dust/water proof</td></tr>
+<tr><td>Cycle Life (100% DoD)</td><td>3,000 cycles</td><td>660,000 km at 220km/cycle</td></tr>
+</tbody>
+</table>
+
+<p>The LFP chemistry was selected for the i5 based on three key advantages over NMC (Nickel Manganese Cobalt) chemistry for commercial vehicle applications. First, LFP's inherent thermal stability eliminates the risk of thermal runaway, a critical safety factor for trucks carrying heavy payloads in urban environments. Second, LFP's cycle life of 3,000+ deep cycles at 100 percent depth of discharge far exceeds NMC's 1,500-2,000 cycles, translating to a battery service life exceeding the vehicle's design life. Third, LFP uses no cobalt, reducing raw material cost and supply chain risk.</p>
+
+<h3>Battery Module Design</h3>
+<p>The 336 cells are organized into 14 modules of 12 cells each. Each module includes:</p>
+<ul>
+<li>12 prismatic LFP cells (3.2V, 182Ah each) in series connection</li>
+<li>Module-level BMS slave board monitoring voltage, temperature, and current per cell</li>
+<li>Liquid cooling plates integrated between every 4 cells for uniform thermal distribution</li>
+<li>Aluminium module housing with IP67 sealing and pressure relief valve</li>
+<li>Module-level fusing and contactor for isolation during service</li>
+</ul>
+
+<p>Module-level design enables field service: a failed module can be identified via diagnostic codes, removed from the pack, and replaced without affecting the remaining 13 modules. Module replacement requires 2-3 hours of labour and a replacement module cost of approximately USD 2,500-3,500, making battery service manageable without requiring complete pack replacement.</p>
+
+<h2>Motor and Drivetrain</h2>
+
+<table>
+<thead><tr><th>Parameter</th><th>i5 Motor Specification</th></tr></thead>
+<tbody>
+<tr><td>Motor Type</td><td>Permanent Magnet Synchronous (PMSM)</td></tr>
+<tr><td>Peak Power</td><td>185 kW (248 HP)</td></tr>
+<tr><td>Continuous Power</td><td>120 kW (161 HP)</td></tr>
+<tr><td>Peak Torque</td><td>1,100 Nm</td></tr>
+<tr><td>Continuous Torque</td><td>650 Nm</td></tr>
+<tr><td>Max Speed</td><td>6,000 rpm</td></tr>
+<tr><td>Cooling</td><td>Liquid (shared with battery circuit)</td></tr>
+<tr><td>Reduction Gearbox</td><td>2-speed, ratios 15.5:1 and 7.2:1</td></tr>
+<tr><td>Differential</td><td>Conventional, 4.875:1</td></tr>
+<tr><td>Max Speed (vehicle)</td><td>90 km/h (limited)</td></tr>
+</tbody>
+</table>
+
+<p>The PMSM motor was selected for its high efficiency (96 percent peak), high power density (3.5 kW/kg), and excellent low-speed torque characteristics. The motor's 1,100 Nm peak torque is available from 0 rpm, providing instant acceleration that is particularly advantageous for urban stop-and-go delivery operations. The 2-speed gearbox optimizes the trade-off between low-speed torque (first gear: 15.5:1 ratio for 17,050 Nm at the wheels) and highway cruising efficiency (second gear: 7.2:1 for 7,920 Nm at the wheels at lower motor speed).</p>
+
+<div class="key-point">Regenerative braking captures up to 25 percent of kinetic energy during deceleration in urban delivery cycles. The regen system provides up to 150 kW of deceleration power, sufficient for most urban braking events without engaging the friction brakes. This extends brake pad life to 150,000+ km and reduces brake dust, a significant environmental benefit in urban areas.</div>
+
+<h2>Battery Management System (BMS)</h2>
+
+<p>The BMS is the critical control system that ensures battery safety, longevity, and performance. The i5's BMS uses a distributed architecture with a master controller and 14 slave boards (one per module):</p>
+
+<h3>BMS Functions</h3>
+<ul>
+<li><strong>Cell voltage monitoring</strong>: Each cell's voltage measured at 10ms intervals, accuracy plus or minus 5mV</li>
+<li><strong>Temperature monitoring</strong>: 4 temperature sensors per module, 56 total, accuracy plus or minus 1 degree C</li>
+<li><strong>Current monitoring</strong>: Hall-effect sensor at pack level, plus or minus 0.5 percent accuracy</li>
+<li><strong>State of Charge (SOC) estimation</strong>: Coulomb counting + voltage lookup + Kalman filter fusion, plus or minus 3 percent accuracy</li>
+<li><strong>State of Health (SOH) estimation</strong>: Capacity fade tracking via charge/discharge energy integration, updated every 50 cycles</li>
+<li><strong>Cell balancing</strong>: Passive balancing at 50mA per cell during charging, activating when cell voltage difference exceeds 20mV</li>
+<li><strong>Thermal management</strong>: Controls coolant pump, heater, and chiller to maintain battery temperature between 15-35 degrees C</li>
+<li><strong>Fault protection</strong>: Over-voltage (3.65V), under-voltage (2.50V), over-current (350A), over-temperature (55C), under-temperature (-10C) protection with contactor disconnection</li>
+</ul>
+
+<h2>Charging System</h2>
+
+<table>
+<thead><tr><th>Charging Mode</th><th>Standard</th><th>Power</th><th>Time (0-80%)</th><th>Time (0-100%)</th></tr></thead>
+<tbody>
+<tr><td>DC Fast (CCS2)</td><td>GB/T 27930 / CCS</td><td>120 kW max</td><td>35 min</td><td>55 min</td></tr>
+<tr><td>DC Fast (lower)</td><td>CCS2, 60 kW</td><td>60 kW</td><td>70 min</td><td>110 min</td></tr>
+<tr><td>AC Slow (3-phase)</td><td>GB/T 20234 / Type 2</td><td>22 kW</td><td>3.5 hours</td><td>5.5 hours</td></tr>
+<tr><td>AC Slow (1-phase)</td><td>Type 2</td><td>7 kW</td><td>11 hours</td><td>16 hours</td></tr>
+</tbody>
+</table>
+
+<p>The CCS2 (Combined Charging System) connector is standard, compatible with the growing DC fast-charging networks in Southeast Asia, Europe, and Latin America. The BMS communicates with the charger via the CCS protocol, negotiating charging voltage, current, and temperature limits. During fast charging, the BMS monitors cell temperature and reduces charging current if the battery exceeds 40 degrees C, protecting cell longevity.</p>
+
+<h2>Thermal Management System</h2>
+
+<p>The i5 uses an integrated thermal management system that maintains the battery, motor, and power electronics within their optimal temperature ranges:</p>
+
+<table>
+<thead><tr><th>Component</th><th>Operating Range</th><th>Cooling Method</th><th>Heating Method</th></tr></thead>
+<tbody>
+<tr><td>Battery pack</td><td>15-35 C</td><td>Chiller (AC-based)</td><td>PTC heater (5 kW)</td></tr>
+<tr><td>Motor</td><td>-20 to 90 C</td><td>Glycol-water radiator</td><td>N/A (self-heating)</td></tr>
+<tr><td>Inverter</td><td>-30 to 65 C</td><td>Glycol-water radiator</td><td>N/A</td></tr>
+<tr><td>Cabin</td><td>18-24 C</td><td>AC + PTC heater</td><td>PTC heater (3 kW)</td></tr>
+</tbody>
+</table>
+
+<div class="key-point">In cold climate operations below 0 degrees C, the battery PTC heater pre-warms the pack to 15 degrees C before driving and during charging. This cold-weather conditioning consumes 5-8 kWh per cold-start event, reducing effective range by 20-30 km in winter operations. The system automatically activates when battery temperature drops below 10 degrees C.</div>
+
+<h2>Vehicle Control Unit (VCU)</h2>
+
+<p>The VCU is the central controller that coordinates all vehicle subsystems: battery, motor, BMS, inverter, brake system, thermal management, and driver interface. The VCU uses a 32-bit automotive-grade microprocessor running a real-time operating system (AUTOSAR) with the following control responsibilities:</p>
+
+<ul>
+<li><strong>Torque management</strong>: Translates accelerator pedal position to motor torque request, considering battery SOC, motor temperature, and vehicle speed</li>
+<li><strong>Regenerative braking coordination</strong>: Blends regen and friction braking based on pedal travel, vehicle speed, and battery SOC/temperature</li>
+<li><strong>Thermal management control</strong>: Activates cooling/heating based on component temperatures and driving mode</li>
+<li><strong>Charging coordination</strong>: Manages charging session including pre-conditioning, current limits, and termination</li>
+<li><strong>Fault management</strong>: Detects and responds to faults with graduated response (warning, derate, shutdown)</li>
+<li><strong>Diagnostic interface</strong>: Provides OBD-II compatible diagnostic data for fleet maintenance systems</li>
+</ul>
+
+<h2>Efficiency and Range Analysis</h2>
+
+<table>
+<thead><tr><th>Operating Condition</th><th>Energy Consumption</th><th>Range (88 kWh usable)</th></tr></thead>
+<tbody>
+<tr><td>Urban delivery (25 km/h avg, 50% payload)</td><td>0.55 kWh/km</td><td>220 km</td></tr>
+<tr><td>Urban delivery (25 km/h, full payload)</td><td>0.62 kWh/km</td><td>200 km</td></tr>
+<tr><td>Highway (60 km/h, full payload)</td><td>0.50 kWh/km</td><td>235 km</td></tr>
+<tr><td>Highway (80 km/h, full payload)</td><td>0.65 kWh/km</td><td>185 km</td></tr>
+<tr><td>Cold weather (-5 C, full payload)</td><td>0.75 kWh/km</td><td>160 km</td></tr>
+<tr><td>Hot weather (40 C, full payload, AC on)</td><td>0.68 kWh/km</td><td>175 km</td></tr>
+</tbody>
+</table>
+
+<p>The i5's energy consumption ranges from 0.50 to 0.75 kWh/km depending on operating conditions. Urban delivery with frequent stops and regenerative braking is surprisingly efficient at 0.55-0.62 kWh/km, as regen recovers 20-25 percent of braking energy. Highway cruising at 60 km/h is the most efficient mode, while high-speed (80 km/h) and cold-weather operations significantly reduce range.</p>
+
+<h2>Conclusion</h2>
+
+<p>The SAGMOTO i5 electric truck architecture delivers a well-integrated, purpose-built electric vehicle platform for commercial fleet operations. The LFP battery pack provides safety, longevity, and modular serviceability. The PMSM motor with 2-speed gearbox delivers the torque and efficiency needed for urban distribution. The BMS ensures battery safety and longevity through comprehensive monitoring and control. The integrated thermal management system maintains optimal operating temperatures across diverse climate conditions. For fleet operators planning electric vehicle adoption, the i5's architecture provides a proven, reliable platform supported by SAGMOTO's commercial vehicle engineering experience and Shaanxi Fenghan Trading's export coordination.</p>
+
+    </div>
+    <div class="article-cta">
+        <h3>Request SAGMOTO Specification Package</h3>
+        <p>Shaanxi Fenghan Trading supplies SAGMOTO trucks to fleet operators worldwide with FOB Xi'an pricing, full export documentation, and after-sales support.</p>
+        <a href="https://wa.me/8615319431311?text=Hello%2C%20I%20need%20a%20SAGMOTO%20quotation">WhatsApp +86 15319431311</a>
+    </div>
+</div>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-main">
+            <div class="footer-col"><h3>PRODUCTS</h3><ul><li><a href="../products.html?cat=light">Light Duty</a></li><li><a href="../products.html?cat=medium">Medium Duty</a></li><li><a href="../products.html?cat=heavy">Heavy Duty</a></li><li><a href="../products.html?cat=offroad">Off-road</a></li></ul></div>
+            <div class="footer-col"><h3>RESOURCES</h3><ul><li><a href="index.html">Blog</a></li><li><a href="../news_list/81163.html">News</a></li><li><a href="../video_list.html">Videos</a></li></ul></div>
+            <div class="footer-col footer-contact"><h3>CONTACT US</h3><p class="hotline-number">+86 15319431311</p><p class="footer-email">sales@fenghan-trade.com</p></div>
+        </div>
+        <div class="footer-bottom"><div class="footer-copyright"><p>&copy;2026 Shaanxi Fenghan Trading Co., Ltd</p><p style="margin-top:6px;font-size:12px;">🌐 Our Network: <a href="https://fenghan-trade.com/" target="_blank" rel="noopener" style="color:#C89B3C;">Fenghan Trade (SHACMAN/SAGMOTO)</a> · <a href="https://dongfengevtrucks.com/" target="_blank" rel="noopener" style="color:#C89B3C;">EV Trucks — Dongfeng Electric</a></p></div></div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/whatsapp-float.js" async></script>
+</body>
+</html>
