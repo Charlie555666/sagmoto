@@ -30,5 +30,16 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+User-agent: Diffbot
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+
 Sitemap: https://sagmoto-trucks.com/sitemap.xml
 Sitemap: https://sagmoto-trucks.com/sitemap-images.xml
