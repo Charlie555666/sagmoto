@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Workshop guide to SAGMOTO i5 electric truck motor and inverter maintenance: PMSM inspection, coolant loop service, diagnostics, insulation tests and HV safety.">
+    <meta name="keywords" content="SAGMOTO i5, electric truck maintenance, PMSM motor service, inverter cooling, insulation resistance test, HV safety, 98 kWh LFP battery, electric truck diagnostics">
+    <meta property="og:title" content="SAGMOTO i5 Electric Truck: Motor and Inverter Maintenance Guide">
+    <meta property="og:description" content="Workshop guide to SAGMOTO i5 electric truck motor and inverter maintenance: PMSM inspection, coolant loop service, diagnostics, insulation tests and HV safety.">
+    <meta property="og:image" content="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="geo.region" content="CN"/>
+    <meta name="geo.placename" content="Xi'an, Shaanxi, China"/>
+    <meta name="geo.position" content="34.3416;108.9398"/>
+    <link rel="canonical" href="https://sagmoto-trucks.com/blog/i5-motor-inverter-maintenance.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="icon" href="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <title>SAGMOTO i5 Electric Truck: Motor and Inverter Maintenance Guide | SAGMOTO Blog</title>
+    <style>
+        .article-container { max-width: 800px; margin: 80px auto 40px; padding: 0 20px; }
+        .article-header { margin-bottom: 40px; }
+        .article-header h1 { font-size: 32px; font-weight: 700; color: #1a1a2e; line-height: 1.3; margin-bottom: 16px; }
+        .article-meta { font-size: 13px; color: #999; display: flex; gap: 16px; flex-wrap: wrap; }
+        .article-body { font-size: 16px; line-height: 1.8; color: #333; }
+        .article-body h2 { font-size: 24px; font-weight: 700; color: #1a1a2e; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #f0f2f5; }
+        .article-body h3 { font-size: 20px; font-weight: 600; color: #333; margin: 28px 0 12px; }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { margin: 12px 0 20px 24px; }
+        .article-body li { margin-bottom: 8px; }
+        .article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+        .article-body table th { background: #1a1a2e; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .article-body table td { padding: 10px 14px; border-bottom: 1px solid #e8e8e8; }
+        .article-body table tr:nth-child(even) td { background: #f9fafb; }
+        .article-cta { background: #0f3460; color: #fff; padding: 32px; border-radius: 12px; text-align: center; margin: 40px 0; }
+        .article-cta h3 { color: #fff; margin-bottom: 12px; font-size: 20px; }
+        .article-cta p { color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+        .article-cta a { display: inline-block; background: #fff; color: #0f3460; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .key-point { background: #f0f4ff; border-left: 4px solid #0f3460; padding: 16px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        @media (max-width: 768px) { .article-header h1 { font-size: 24px; } .article-body { font-size: 15px; } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org", "@type": "Article",
+      "headline": "SAGMOTO i5 Electric Truck: Motor and Inverter Maintenance Guide", "description": "Workshop guide to SAGMOTO i5 electric truck motor and inverter maintenance: PMSM inspection, coolant loop service, diagnostics, insulation testing and HV safety.",
+      "author": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "url": "https://sagmoto-trucks.com/" },
+      "publisher": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "logo": { "@type": "ImageObject", "url": "https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png" } },
+      "datePublished": "2026-10-01", "dateModified": "2026-10-01",
+      "mainEntityOfPage": { "@type": "WebPage", "id": "https://sagmoto-trucks.com/blog/i5-motor-inverter-maintenance.html" }
+    }
+    </script>
+</head>
+<body>
+<div class="e_container-2 transparent">
+    <div class="header-inner">
+        <div class="logo-area">
+            <a href="../index.html">
+                <img src="../images/sagmoto-original/7c996f42-7545-43cf-b326-fff928aa4f57.png" alt="SAGMOTO" class="logo-dark" loading="lazy">
+                <img src="../images/sagmoto-original/45799ffa-90f5-4dc5-8fc1-f0dd10445b52.png" alt="SAGMOTO" class="logo-light" loading="lazy">
+            </a>
+        </div>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+        <ul class="main-nav">
+            <li><a href="../products.html">PRODUCTS</a></li>
+            <li><a href="javascript:;">APPLICATIONS</a></li>
+            <li><a href="../service.html">SERVICES</a></li>
+            <li><a href="index.html" style="font-weight:700;color:#0f3460;">BLOG</a></li>
+            <li><a href="../news_list/81163.html">NEWS</a></li>
+            <li><a href="../about.html">ABOUT US</a></li>
+        </ul>
+    </div>
+</div>
+<div class="article-container">
+    <div class="article-header">
+        <h1>SAGMOTO i5 Electric Truck: Motor and Inverter Maintenance Guide</h1>
+        <div class="article-meta"><span>2026-10-01</span><span>Maintenance Guide</span><span>9 min read</span></div>
+    </div>
+    <div class="article-body">
+
+<h2>Electric drivelines do not remove maintenance, they relocate it</h2>
+
+<p>Fleet managers moving from diesel to electric often expect the maintenance line to collapse. An electric driveline does remove oil changes, fuel filtration, exhaust aftertreatment, clutch replacement and a long list of rotating wear items, and it genuinely reduces scheduled labour by 30 to 45 percent on comparable duty. What it does not remove is the need for disciplined inspection. The components that remain are thermally sensitive, dangerous to service without procedure, and expensive to replace if a fault is ignored until it becomes a failure.</p>
+
+<p>The SAGMOTO i5 is a light electric truck built around a lithium iron phosphate battery pack of approximately 98 kWh, a permanent magnet synchronous motor, and a rated operating range of roughly 200 kilometres on a full charge. That describes an urban and regional distribution machine: last-mile delivery, municipal service rounds, port and campus logistics, and fixed-route work where the vehicle returns to a known depot each night. The duty is stop-start, thermal cycling is frequent, and inverter load is highly variable. Those three characteristics define the maintenance programme.</p>
+
+<p>This guide is written for workshop supervisors standing up service capability for the i5 or a mixed electric fleet. Operators assessing the wider range can review the <a href="../new-energy.html">SAGMOTO new energy electric trucks</a> line for model context.</p>
+
+<h3>Drive system topology</h3>
+
+<ul>
+<li><strong>Traction battery, approximately 98 kWh LFP.</strong> Lithium iron phosphate chemistry, chosen for cycle life and thermal stability, managed by a BMS that balances cells and reports state of health.</li>
+<li><strong>Inverter.</strong> Converts battery DC to three-phase AC for the motor and manages regenerative braking. Contains the power stage, DC-link capacitors, gate drive board and cooling plate.</li>
+<li><strong>Permanent magnet synchronous motor.</strong> High efficiency at low to medium speed, strong torque density, no brushes and no slip rings.</li>
+<li><strong>Reduction gearbox.</strong> A reduction unit with its own oil circuit. Low wear, but oil level and condition still require scheduled checks.</li>
+</ul>
+
+<h3>Why the interlock loop matters to a technician</h3>
+
+<p>The high-voltage interlock is a low-voltage circuit running through every HV connector, service disconnect and cover. If any of those is opened, the interlock opens, the contactors drop and the system discharges to a safe state. Technicians must never jumper the interlock to keep a vehicle running.</p>
+
+<div class="key-point"><strong>Key point:</strong> An electric driveline removes wear-based maintenance and adds condition-based maintenance. Budget fewer labour hours and more diagnostic capability, and train technicians on high-voltage procedure before the first vehicle arrives rather than after the first fault.</div>
+
+<h2>Scheduled service interval programme</h2>
+
+<p>The table below gives a realistic interval structure for the i5 on urban distribution duty, in distance and operating hours. Whichever threshold is reached first governs the service. Fleets on severe duty, meaning high ambient temperature, heavy stop-start work or sustained loading above 80 percent of rated capacity, should compress intervals by roughly 20 percent.</p>
+
+<table>
+<tr><th>Interval</th><th>Inspection or task</th><th>Acceptance criterion</th></tr>
+<tr><td>Daily, pre-service</td><td>Visual HV harness and connector check; coolant level; charge port inspection</td><td>No damage, no fluid loss, no contamination</td></tr>
+<tr><td>5,000 km or 250 h</td><td>Coolant concentration and level; pump and fan operation; gearbox oil level</td><td>45 - 55 percent glycol; level within mark</td></tr>
+<tr><td>20,000 km or 1,000 h</td><td>Full diagnostic scan; fault history download; bearing check; insulation resistance test</td><td>No active faults; insulation above threshold</td></tr>
+<tr><td>40,000 km or 2,000 h</td><td>Coolant replacement; strainer service; torque check of HV terminals and earth bonds</td><td>Coolant clear; terminals to specification</td></tr>
+<tr><td>60,000 km or 3,000 h</td><td>Gearbox oil change; coolant loop pressure test; thermal imaging of inverter and motor</td><td>No pressure loss; no hot spot over 15 C above baseline</td></tr>
+<tr><td>100,000 km or 5,000 h</td><td>Full HV inspection; cooling plate descaling if hard water used; BMS state-of-health report</td><td>SOH within warranty threshold</td></tr>
+</table>
+
+<p>Record parts against the vehicle's own numbering convention, logging a coolant loop service kit as a single kit reference rather than as individual hoses and clamps. </p>
+
+<h2>Permanent magnet synchronous motor: inspection and care</h2>
+
+<p>The PMSM has no brushes, no commutator and no wound rotor, which eliminates the largest group of wear items in a conventional motor. What remains are bearings, the resolver that reports rotor position, the temperature sensor, the stator windings and their insulation, and the rotor magnets.</p>
+
+<h3>Bearing condition</h3>
+
+<p>Bearings are the dominant mechanical wear item and the one most likely to give audible warning. Inspect at every 20,000 km interval by running the driveline and listening for a tonal whine that changes with motor speed rather than vehicle speed. Investigate any tonal change before the vehicle returns to service, because a bearing failure can damage the rotor and stator.</p>
+
+<h3>Winding and magnet temperature discipline</h3>
+
+<p>Permanent magnets lose strength permanently above their rated temperature. That degradation is irreversible and shows as reduced torque and higher current draw for the same work, which raises temperature further. The controls are simple: keep the coolant loop healthy, never operate with a coolant fault active, and investigate any over-temperature fault on the day it appears.</p>
+
+<h3>One safety note specific to permanent magnet machines</h3>
+
+<p>A permanent magnet motor generates voltage whenever the rotor turns, whether or not the vehicle is powered. If a vehicle is towed with the driveline connected, the motor acts as a generator and can back-feed the inverter. Never tow an i5 with the drive wheels on the ground.</p>
+
+<h2>Inverter and cooling system service</h2>
+
+<p>The inverter is the component most sensitive to maintenance discipline. Its power stage generates substantial heat during acceleration and regenerative braking, and its reliability is governed by how well that heat is removed. Inverter faults are usually cooling faults in disguise.</p>
+
+<h3>Coolant loop procedure</h3>
+
+<ol>
+<li>Confirm the vehicle is in service mode with the HV system disabled and the service disconnect removed. Apply lockout and tagout and verify zero voltage at the inverter DC terminals with a correctly rated meter.</li>
+<li>Inspect the full loop before opening it: hoses, clamps, pump, heat exchanger core and expansion tank. Look for chalky residue, which indicates past leakage.</li>
+<li>Check concentration with a refractometer and target a 45 to 55 percent glycol mix. Do not use straight water or straight concentrate; both transfer heat worse than a correct mix.</li>
+<li>Drain from the lowest point, flush with deionised water if contamination is present, and refill using a vacuum fill procedure where available. Gravity filling leaves air pockets at the cold plate.</li>
+<li>Degas by running the pump in service mode and topping up until the level is stable, then pressure test the loop. Any pressure loss must be located and corrected before release.</li>
+</ol>
+
+<h3>Pump, fan and thermal management</h3>
+
+<p>The electric coolant pump and the cooling fan are the two active components in the loop, and both should be verified functionally rather than visually. Command the pump through the diagnostic tool and confirm flow by observing level movement in the expansion tank. A pump that runs but does not deliver flow is a common and easily missed fault. Thermal imaging is the highest-value diagnostic available to a fleet with more than a handful of electric vehicles: photograph the inverter housing, motor housing and each HV connection at the 60,000 km service under a standardised load and compare against the previous record. A connection trending upward will fail, and catching it costs a re-torque rather than a harness.</p>
+
+<h2>Diagnostics: reading faults rather than clearing them</h2>
+
+<p>The most damaging habit a workshop can adopt is clearing fault codes to return a vehicle to service. The code is a symptom, and clearing it removes the evidence without removing the cause.</p>
+
+<table>
+<tr><th>Fault category</th><th>Typical presentation</th><th>First diagnostic steps</th></tr>
+<tr><td>Inverter over-temperature</td><td>Power derate, warning lamp, reduced acceleration</td><td>Check coolant level and concentration, pump and fan operation, and airflow obstruction at the heat exchanger</td></tr>
+<tr><td>Insulation fault</td><td>HV system will not enable, isolation warning</td><td>Perform insulation resistance test section by section; inspect harness for chafing and moisture ingress</td></tr>
+<tr><td>Over-current</td><td>Trip under hard acceleration or on a grade</td><td>Check mechanical load, tyre condition, brake drag, bearing condition and driver throttle behaviour</td></tr>
+<tr><td>Resolver or position sensor</td><td>Motor will not start, or runs roughly at low speed</td><td>Inspect connector and shielding; measure sensor resistance and waveform against specification</td></tr>
+<tr><td>Interlock open</td><td>Vehicle will not enter ready state</td><td>Check every HV connector, service disconnect and cover switch in the loop; never bypass</td></tr>
+</table>
+
+<h3>Insulation resistance testing procedure</h3>
+
+<p>Insulation testing is the core electrical safety check on any HV vehicle. Perform it at the 20,000 km interval at minimum, and after any incident involving water ingress or impact.</p>
+
+<ol>
+<li>Disable the HV system, remove the service disconnect, apply lockout and tagout, and verify zero energy state.</li>
+<li>Use an insulation tester rated for the system voltage, following the specified test voltage for the circuit under test.</li>
+<li>Test between each HV conductor and chassis earth, and between HV positive and negative where specified. Allow the reading to stabilise before recording.</li>
+<li>Record values with ambient temperature and humidity noted, because readings vary with both. Trend across services rather than judging a single reading in isolation. If a value is marginal, isolate by section: disconnect motor, inverter and pack in turn and test each separately. Contamination at one connector is more common than degradation inside a component.</li>
+</ol>
+
+<div class="key-point"><strong>Key point:</strong> Never clear an isolation fault without finding its cause. Insulation faults are the leading precursor to a serious HV incident, and a vehicle that intermittently reports low isolation should be removed from service until the section is identified.</div>
+
+<h2>Workshop safety, spares and capability</h2>
+
+<p>Every task above is governed by a safety discipline that must be written, trained and audited. The minimum standard for a workshop serving electric trucks includes the following.</p>
+
+<ul>
+<li><strong>Competent person requirement.</strong> Only technicians with documented HV training may work on the HV system.</li>
+<li><strong>PPE and tooling.</strong> Insulated gloves of the correct class, date-checked before use; insulated tools rated for the system voltage; face protection; a barrier kit.</li>
+<li><strong>Verify before touch.</strong> A documented prove-test-prove sequence: prove the tester on a known source, test for zero voltage, prove it again. Every time.</li>
+<li><strong>Lockout and tagout.</strong> Service disconnect removed and held by the person working on the vehicle.</li>
+<li><strong>Emergency response.</strong> A written procedure for thermal events, including evacuation distance, location of the emergency disconnect and the correct extinguishing approach. Water in large volume is the accepted response.</li>
+</ul>
+
+<p>Plan spares on two tiers. Tier one is the depot consumable set: correct-specification coolant, hose kit, gearbox oil, HV connector seals and insulation test consumables. Tier two is the critical set: coolant pump, fan assembly, service disconnect and an HV harness section, one each per fifteen vehicles, with a defined air freight path for inverter and motor assemblies. Diagnostic capability is the investment fleets most often under-budget; a service tool that reads inverter fault history, commands the pump and fan, and reads pack state of health pays for itself within a year.</p>
+
+<h2>Conclusion</h2>
+
+<p>The SAGMOTO i5 rewards a maintenance programme built around inspection, thermal discipline and diagnostics rather than parts replacement. Its approximately 98 kWh LFP pack, permanent magnet synchronous motor and roughly 200 kilometre working range describe a vehicle designed for predictable urban and regional duty, and that predictability is what makes a condition-based programme effective. Fleets that adopt the interval structure here, test insulation on schedule and treat the coolant loop as critical will see the uptime advantage that justifies electrification.</p>
+
+<p>Fleets that do the opposite will find electric drivelines less tolerant of neglect than diesel ones. The difference is decided by training and by a written procedure, both far cheaper than one inverter replacement.</p>
+
+    </div>
+    <div class="article-cta">
+        <h3>Standing up service capability for an electric fleet?</h3>
+        <p>Send us your fleet size, duty profile and workshop capability. Our technical team will return an i5 service interval schedule, a parts stocking plan, insulation testing procedure and a high-voltage training outline for your technicians.</p>
+        <a href="https://wa.me/8615319431311">Chat on WhatsApp</a>
+    </div>
+</div>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-main">
+            <div class="footer-col"><h3>PRODUCTS</h3><ul><li><a href="../products.html?cat=light">Light Duty</a></li><li><a href="../products.html?cat=medium">Medium Duty</a></li><li><a href="../products.html?cat=heavy">Heavy Duty</a></li><li><a href="../products.html?cat=offroad">Off-road</a></li></ul></div>
+            <div class="footer-col"><h3>RESOURCES</h3><ul><li><a href="index.html">Blog</a></li><li><a href="../news_list/81163.html">News</a></li><li><a href="../video_list.html">Videos</a></li></ul></div>
+            <div class="footer-col footer-contact"><h3>CONTACT US</h3><p class="hotline-number">+86 15319431311</p><p class="footer-email">sales@fenghan-trade.com</p></div>
+        </div>
+        <div class="footer-bottom"><div class="footer-copyright"><p>&copy;2026 Shaanxi Fenghan Trading Co., Ltd</p><p style="margin-top:6px;font-size:12px;">&#127760; Our Network: <a href="https://fenghan-trade.com/" target="_blank" rel="noopener" style="color:#C89B3C;">Fenghan Trade (SHACMAN/SAGMOTO)</a> &middot; <a href="https://dongfengevtrucks.com/" target="_blank" rel="noopener" style="color:#C89B3C;">EV Trucks — Dongfeng Electric</a></p></div></div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/whatsapp-float.js" async></script>
+</body>
+</html>
