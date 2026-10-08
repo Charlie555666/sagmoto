@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SAGMOTO X6 chassis engineering deep dive: Cummins ISM11E5 440HP and ZF 16S, ladder frame section modulus, 13T HD axles, suspension variants and GVWR data.">
+    <meta name="keywords" content="SAGMOTO X6 chassis, Cummins ISM11E5 440HP, ZF 16S transmission, ladder frame section modulus, 13T heavy duty rear axle, truck frame engineering, SAGMOTO heavy chassis">
+    <meta property="og:title" content="X6 Chassis Engineering Deep Dive: Frame, Suspension and Axle Design">
+    <meta property="og:description" content="SAGMOTO X6 chassis engineering deep dive: Cummins ISM11E5 440HP and ZF 16S, ladder frame section modulus, 13T HD axles, suspension variants and GVWR data.">
+    <meta property="og:image" content="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="geo.region" content="CN"/>
+    <meta name="geo.placename" content="Xi'an, Shaanxi, China"/>
+    <meta name="geo.position" content="34.3416;108.9398"/>
+    <link rel="canonical" href="https://sagmoto-trucks.com/blog/x6-chassis-engineering-deep-dive.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="icon" href="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <title>X6 Chassis Engineering Deep Dive: Frame, Suspension and Axle Design | SAGMOTO Blog</title>
+    <style>
+        .article-container { max-width: 800px; margin: 80px auto 40px; padding: 0 20px; }
+        .article-header { margin-bottom: 40px; }
+        .article-header h1 { font-size: 32px; font-weight: 700; color: #1a1a2e; line-height: 1.3; margin-bottom: 16px; }
+        .article-meta { font-size: 13px; color: #999; display: flex; gap: 16px; flex-wrap: wrap; }
+        .article-body { font-size: 16px; line-height: 1.8; color: #333; }
+        .article-body h2 { font-size: 24px; font-weight: 700; color: #1a1a2e; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #f0f2f5; }
+        .article-body h3 { font-size: 20px; font-weight: 600; color: #333; margin: 28px 0 12px; }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { margin: 12px 0 20px 24px; }
+        .article-body li { margin-bottom: 8px; }
+        .article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+        .article-body table th { background: #1a1a2e; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .article-body table td { padding: 10px 14px; border-bottom: 1px solid #e8e8e8; }
+        .article-body table tr:nth-child(even) td { background: #f9fafb; }
+        .article-cta { background: #0f3460; color: #fff; padding: 32px; border-radius: 12px; text-align: center; margin: 40px 0; }
+        .article-cta h3 { color: #fff; margin-bottom: 12px; font-size: 20px; }
+        .article-cta p { color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+        .article-cta a { display: inline-block; background: #fff; color: #0f3460; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .key-point { background: #f0f4ff; border-left: 4px solid #0f3460; padding: 16px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        @media (max-width: 768px) { .article-header h1 { font-size: 24px; } .article-body { font-size: 15px; } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org", "@type": "Article",
+      "headline": "X6 Chassis Engineering Deep Dive: Frame, Suspension and Axle Design", "description": "SAGMOTO X6 chassis engineering deep dive: Cummins ISM11E5 440HP and ZF 16S, ladder frame section modulus, 13T HD axles, suspension variants and GVWR data.",
+      "author": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "url": "https://sagmoto-trucks.com/" },
+      "publisher": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "logo": { "@type": "ImageObject", "url": "https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png" } },
+      "datePublished": "2026-10-08", "dateModified": "2026-10-08",
+      "mainEntityOfPage": { "@type": "WebPage", "id": "https://sagmoto-trucks.com/blog/x6-chassis-engineering-deep-dive.html" }
+    }
+    </script>
+</head>
+<body>
+<div class="e_container-2 transparent">
+    <div class="header-inner">
+        <div class="logo-area">
+            <a href="../index.html">
+                <img src="../images/sagmoto-original/7c996f42-7545-43cf-b326-fff928aa4f57.png" alt="SAGMOTO" class="logo-dark" loading="lazy">
+                <img src="../images/sagmoto-original/45799ffa-90f5-4dc5-8fc1-f0dd10445b52.png" alt="SAGMOTO" class="logo-light" loading="lazy">
+            </a>
+        </div>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+        <ul class="main-nav">
+            <li><a href="../products.html">PRODUCTS</a></li>
+            <li><a href="javascript:;">APPLICATIONS</a></li>
+            <li><a href="../service.html">SERVICES</a></li>
+            <li><a href="index.html" style="font-weight:700;color:#0f3460;">BLOG</a></li>
+            <li><a href="../news_list/81163.html">NEWS</a></li>
+            <li><a href="../about.html">ABOUT US</a></li>
+        </ul>
+    </div>
+</div>
+<div class="article-container">
+    <div class="article-header">
+        <h1>X6 Chassis Engineering Deep Dive: Frame, Suspension and Axle Design</h1>
+        <div class="article-meta"><span>2026-10-08</span><span>Engineering</span><span>10 min read</span></div>
+    </div>
+    <div class="article-body">
+
+<h2>The X6 is a chassis first and a truck second</h2>
+
+<p>The SAGMOTO X6 is frequently described by its headline numbers: a Cummins ISM11E5 engine producing 440 horsepower and 2,100 Nm of torque, paired with a ZF 16S sixteen-speed transmission. Those figures are real and they matter, but they describe only the drivetrain. The engineering decision that actually determines whether an X6 survives a decade of heavy export duty is the chassis beneath it: the frame, the suspension, the axles and the way those systems are laid out and joined. A powerful engine on a weak frame is a liability, not an asset.</p>
+
+<p>This article is a structural walk-through of the X6 platform for fleet engineers and procurement specialists who spec trucks rather than buy brochures. We cover ladder frame construction and section modulus, front and rear axle options including the 13-tonne heavy duty rear axle, suspension variants from multi-leaf to air, crossmember layout, power take-off provisions, and the GVWR and GCW data that set the legal and practical limits. The objective is to give a buyer the vocabulary and the numbers to specify an X6 correctly for a given duty cycle.</p>
+
+<p>For heavy duty export work, particularly in African mining corridors, Middle Eastern construction and Southeast Asian infrastructure projects, the chassis is where the money is won or lost. The X6 is designed to be specified, not just ordered, and the sections below explain the levers.</p>
+
+<h2>Ladder frame construction and section modulus</h2>
+
+<p>The X6 rides on a full-length ladder frame built from high-strength low-alloy steel side members with rolled channel section. The standard export side rail is a deep-section channel, typically around 300 mm in depth with an 8 to 9 mm web thickness, chosen to deliver a high vertical section modulus without excessive weight. Section modulus is the property that decides how much bending load a frame rail can carry before it yields, and for a heavy duty chassis it is the single most important structural number.</p>
+
+<p>Indicatively, the X6 side rail cross-section delivers a section modulus in the region of 1,000 to 1,400 cm3, depending on the exact rail depth and thickness specified. That figure places the X6 in the heavy duty class where concentrated point loads, such as those from a tipper body or a crane mount, can be carried without local frame distortion. Where a buyer plans to fit a specialist body with high point loads, the frame can be specified with reinforced inserts or a thicker web, raising the section modulus and the local load capacity.</p>
+
+<p>Frame stiffness matters for two reasons. First, a stiff frame keeps the cab, body and drivetrain aligned under load, reducing fatigue cracks at welded junctions and extending vehicle life. Second, it protects the payload and the driver: excessive frame flex transmits shock into the cargo and the cab, accelerating wear on everything mounted to the chassis. The X6 frame is designed with a continuous rail and minimal interruption, because every hole cut in a rail is a stress concentrator that must be compensated by local reinforcement.</p>
+
+<div class="key-point"><strong>Key point:</strong> For heavy point loads, specify the reinforced side rail option. The standard X6 rail section modulus of roughly 1,000-1,400 cm3 suits general heavy duty; bodies with cranes, mixers or tipper hoists need the thicker web and insert package to avoid fatigue cracking at the mount points.</div>
+
+<h2>Front and rear axle options, including the 13T HD rear axle</h2>
+
+<p>The X6 is offered with a front axle rated in the 7 to 9 tonne class, suitable for the steering and a portion of the front axle load on rigid and tractor configurations. The front axle uses a forged I-beam design with taper roller bearings and a standard disc or drum brake package, and it is sized to keep the front-end geometry stable under full GVWR.</p>
+
+<p>The rear axle options are where the X6 shows its heavy duty intent. The standard heavy duty rear axle is rated at 13 tonnes, a single-reduction hub with a hypoid crown wheel and pinion sized for sustained high torque from the ISM11E5 and the ZF 16S. For higher GCW applications, the X6 can be specified with tandem rear axle configurations, combining two 13-tonne-class axles for a combined rating around 26 tonnes, which is the configuration typically seen on tipper and heavy rigid export builds.</p>
+
+<p>The 13-tonne heavy duty rear axle is the workhorse of the range. Its final drive ratios are selectable, typically from around 4.1 to 5.9, allowing the fleet to trade gradeability against cruising rpm. A lower ratio (higher numerical) improves startability and grade performance on construction sites and mine access, while a higher ratio reduces engine rpm at highway speed for better fuel economy on linehaul. Specifying the ratio against the dominant duty is one of the highest-value decisions on an X6 order.</p>
+
+<table>
+<thead>
+<tr><th>Axle / component</th><th>Typical rating</th><th>Configuration notes</th></tr>
+</thead>
+<tbody>
+<tr><td>Front steering axle</td><td>7 - 9 tonnes</td><td>Forged I-beam, taper roller bearings, disc or drum brake</td></tr>
+<tr><td>Rear single axle (HD)</td><td>13 tonnes</td><td>Single reduction, selectable ratio 4.1 - 5.9</td></tr>
+<tr><td>Rear tandem (tipper / heavy rigid)</td><td>Up to 26 tonnes combined</td><td>Two 13-tonne-class axles, inter-axle differential</td></tr>
+<tr><td>Wheel hub and bearing</td><td>Rated to axle class</td><td>Heavy-duty taper roller, greased for extended service</td></tr>
+<tr><td>Brake system</td><td>Air, drum or disc</td><td>ABS standard, exhaust brake on engine</td></tr>
+<tr><td>Final drive ratio options</td><td>4.1 / 4.44 / 4.8 / 5.29 / 5.9</td><td>Lower ratio = more grade; higher ratio = better cruise</td></tr>
+</tbody>
+</table>
+
+<p>The axle selection interacts directly with the ZF 16S transmission and the engine's torque band. A 13-tonne rear axle on a 4.8 final drive with the ZF 16S lets the X6 start a full load on a 10 percent grade and cruise at a controlled rpm on the highway, which is the balance most export heavy duty operators want. Fleets should confirm the final drive against their typical terrain before the truck is built, because changing it afterwards means a full axle rebuild.</p>
+
+<h2>Suspension variants: multi-leaf and air</h2>
+
+<p>The X6 is offered with two principal suspension families, and the choice is a duty decision rather than a comfort decision. The multi-leaf steel spring suspension uses parabolic or conventional leaf packs at both axles, with the rear pack rated to match the axle class. This is the robust, low-maintenance option for construction, mining and rough-access work, where the suspension must absorb shock loading and resist damage from debris and uneven ground. Multi-leaf suspension also holds its ride height under varying load, which matters for tipper and mixer bodies.</p>
+
+<p>The air suspension variant uses air springs at the rear (and optionally the front) with height-control valves and a compressor. Air suspension improves ride quality, protects sensitive cargo, and allows the body height to be adjusted for loading and for matching a trailer or body interface. For fleets carrying fragile goods, operating on paved export corridors, or requiring a constant deck height for body interface, air suspension is the correct specification despite its higher first cost and slightly higher maintenance complexity.</p>
+
+<p>Most heavy duty X6 export builds use multi-leaf at the front and a choice at the rear depending on application. A tipper or mixer almost always runs multi-leaf rear for durability; a heavy recovery or fragile-freight rigid may run air rear for protection. The two are not mutually exclusive within a fleet, and many operators run mixed suspension specifications across an X6 order.</p>
+
+<div class="key-point"><strong>Key point:</strong> Match suspension to the cargo and the road, not to the driver preference. Multi-leaf for tipper, mixer and rough-access duty; air rear for fragile cargo, paved corridors and constant deck-height interfaces. Specifying this wrong is an expensive correction later.</div>
+
+<h2>Crossmember layout and chassis rigidity</h2>
+
+<p>The frame's resistance to torsion comes as much from the crossmembers as from the side rails. The X6 uses a sequence of crossmembers at defined stations: a heavy front crossmember carrying the engine mount and front suspension reaction, mid-frame crossmembers tying the rails across the cab and fuel tank zone, and a robust rear crossmember or sub-frame interface for the body and the rear suspension reaction. The spacing and gauge of these members are tuned so that the frame carries vertical bending at the rails while the crossmembers resist the twisting that occurs on uneven ground.</p>
+
+<p>For tipper and mixer applications, the body mounting sub-frame is integrated with the rear crossmember structure so that the hoist and body loads are carried into the main frame rather than cantilevered off the rails. This integration is the difference between a body that lasts and one that cracks the chassis at the mounting points within two years. SAGMOTO supplies the X6 with standard body-mount stations and reinforcement plates at the high-stress locations, and bodybuilders should use those stations rather than drilling new holes in the rail.</p>
+
+<p>From a maintenance perspective, the crossmember layout also determines service access. The X6 positions the fuel tank, battery box, air tanks and exhaust so that the major service items are reachable without dropping the body on rigid configurations, and the chassis routing for air and electrical lines follows the inside of the frame to protect them from external damage. These details reduce roadside downtime, which is the dominant cost driver in remote export operations.</p>
+
+<h2>Power take-off provisions and body interface</h2>
+
+<p>Heavy duty rigid trucks live or die by their power take-off (PTO) provisions, because tippers, mixers, cranes and recovery winches all draw hydraulic or mechanical power from the driveline. The X6 provides PTO openings on the ZF 16S transmission, both at the rear of the gearbox and via the engine-mounted pump drive where specified, with a rated PTO torque and a defined maximum continuous power draw. The transmission PTO is the standard interface for tipper hoists and mixer drums, while the engine PTO suits high-flow hydraulic requirements such as large cranes.</p>
+
+<p>The chassis is pre-piped and pre-drilled for the common body interfaces: tipper sub-frame mounts, mixer front and rear supports, and the hydraulic line routing along the frame. Specifying the PTO at order is important because the gearbox must be built with the correct PTO aperture and the engine control strategy must be set to permit stationary PTO operation at governed rpm. Retrofitting PTO to a gearbox not built for it is not advisable.</p>
+
+<p>Fleets planning specialist bodies should also confirm the front-end accessory drive. The Cummins ISM11E5 has spare accessory drive capacity for an additional hydraulic pump, and the X6 cooling package is sized to tolerate the extra heat load of continuous PTO work, provided the specified fan and radiator are the heavy duty items. Under-specifying cooling is the most common cause of PTO-duty reliability problems.</p>
+
+<h2>GVWR, GCW and duty data</h2>
+
+<p>The legal and practical limits of any X6 configuration are set by its gross vehicle weight rating and, for tractor or combined operation, its gross combination weight. The table below summarises the indicative ratings for the common X6 export configurations. These are typical figures and must be confirmed against the specific axle, suspension and tyre specification quoted, because local bridge and axle laws vary by market.</p>
+
+<table>
+<thead>
+<tr><th>Configuration</th><th>GVWR</th><th>Typical GCW</th><th>Dominant application</th></tr>
+</thead>
+<tbody>
+<tr><td>X6 rigid, 4x2</td><td>18 - 20 tonnes</td><td>n/a (rigid)</td><td>Regional freight, rigid distribution</td></tr>
+<tr><td>X6 rigid, 6x4 single rear</td><td>24 - 26 tonnes</td><td>n/a (rigid)</td><td>Heavy rigid, construction supply</td></tr>
+<tr><td>X6 tipper, 6x4, 13T HD axle</td><td>26 - 28 tonnes</td><td>n/a (rigid)</td><td>Mining, aggregate, site work</td></tr>
+<tr><td>X6 tractor, 4x2</td><td>18 tonnes (tractor)</td><td>40 - 50 tonnes</td><td>Linehaul, regional tractor</td></tr>
+<tr><td>X6 tractor, 6x4</td><td>25 - 27 tonnes (tractor)</td><td>60 - 80 tonnes</td><td>Heavy linehaul, GCW up to 80 t</td></tr>
+</tbody>
+</table>
+
+<p>Reading the table, the X6 is a flexible heavy duty platform rather than a single truck. A 6x4 tipper with the 13-tonne heavy duty rear axle and multi-leaf suspension is rated around 26 to 28 tonnes GVWR, which covers the bulk of African and Middle Eastern tipper duty. A 6x4 tractor with the ISM11E5 440 hp and ZF 16S can be specified to a GCW of 60 to 80 tonnes depending on the final drive, axle and tyre combination, which places it in the heavy linehaul bracket. The engine's 2,100 Nm of torque is what makes the upper end of that GCW range practical.</p>
+
+<p>Fleets must also respect local bridge formulae. A high GVWR is only useful if the axle spacing and tyre specification keep individual axle loads within the destination market's legal limit. The X6 wheelbase options are designed to allow legal axle loading at the rated GVWR in most export markets, but the final configuration should be checked against the specific market's rules before shipment.</p>
+
+<h2>Drivetrain synergy: ISM11E5 and ZF 16S</h2>
+
+<p>The Cummins ISM11E5 is an 11-litre six-cylinder producing 440 hp at around 1,900 rpm and 2,100 Nm of torque across a broad low-end plateau. That torque plateau is the key number: it lets the X6 hold a heavy load on a grade without dropping out of the power band, and it allows the ZF 16S to be geared so that cruising sits inside the efficient band. The ZF 16S is a sixteen-speed overdrive transmission with a wide ratio spread, deep reduction for startability and an overdrive top for relaxed highway cruising.</p>
+
+<p>The synergy is in the ratio coverage. With the 16S and a 4.8 rear axle, an X6 tractor turns roughly 1,300 to 1,500 rpm at 80 to 90 km/h depending on tyre, inside the engine's efficient window, while still offering a deep first ratio for starting a fully loaded combination on a grade. That combination is what lets the X6 deliver both gradeability and fuel economy, which are normally in tension on a heavy duty chassis.</p>
+
+<p>From a service standpoint, both the Cummins ISM family and the ZF 16S are globally supported, which keeps the X6 practical for remote export operation. Filters, clutch, bearings and seals are available through established Cummins and ZF distribution, and the diagnostics follow standard protocols readable with common service tools. A truck that an in-house workshop can fully service is worth more to a remote fleet than a truck with a superior specification that requires dealer-only tooling.</p>
+
+<h2>Specifying an X6: a checklist for buyers</h2>
+
+<p>The X6 rewards careful specification, and the items below are the ones that most affect the result. Confirm each before the truck is built, because several are expensive or impossible to change afterwards.</p>
+
+<ul>
+<li><strong>Side rail section.</strong> Standard for general heavy duty; reinforced web and inserts for crane, mixer or tipper hoist point loads. Protects against fatigue cracking.</li>
+<li><strong>Rear axle and ratio.</strong> 13-tonne HD single as standard; tandem to 26 tonnes for tippers. Choose final drive against terrain: lower for grade, higher for cruise.</li>
+<li><strong>Suspension.</strong> Multi-leaf for rough and point-load duty; air rear for fragile cargo and constant deck height.</li>
+<li><strong>PTO.</strong> Confirm the ZF 16S PTO aperture and engine pump drive against the body's hydraulic demand, and specify heavy duty cooling for continuous PTO work.</li>
+<li><strong>Crossmember and body mounts.</strong> Use the factory body-mount stations and reinforcement plates; do not drill new rail holes.</li>
+<li><strong>Bridge law check.</strong> Verify axle spacing and tyre spec keep individual axle loads legal in the destination market at rated GVWR.</li>
+</ul>
+
+<p>Fleets that run a <a href="../zhc.html">SAGMOTO cargo truck flatbed box stake</a> body on the X6 platform should pay particular attention to the body-mount stations and the rear crossmember reinforcement, because a long flatbed loads the frame differently from a tipper and the mount spacing must be correct to avoid rail distortion over the vehicle's life.</p>
+
+<h2>Conclusion</h2>
+
+<p>The X6 is a heavy duty platform engineered around its chassis rather than its headline engine number. The Cummins ISM11E5 440 hp and 2,100 Nm, paired with the ZF 16S sixteen-speed, provide the power and ratio coverage, but it is the ladder frame with its high section modulus, the 13-tonne heavy duty rear axle options, the multi-leaf or air suspension variants, the crossmember and body-mount structure, and the PTO provisions that decide whether the truck performs for a decade in export duty.</p>
+
+<p>For fleet buyers, the practical lesson is to specify the chassis to the duty rather than accepting a standard build. Confirm the side rail section against point loads, select the rear axle and final drive against terrain, match the suspension to the cargo and road, and verify the PTO and cooling against the body's hydraulic demand. Done correctly, the X6 delivers a GVWR up to roughly 28 tonnes rigid and a GCW up to 80 tonnes tractor, with the structural margin that protects both uptime and resale.</p>
+
+<p>Our export engineering team can model an X6 configuration against your specific duty cycle, axle-load rules and body interface, and return a frame and axle specification sheet before you order rather than after. That specification is the document that should go to your workshop and your bodybuilder.</p>
+
+    </div>
+    <div class="article-cta">
+        <h3>Specifying an X6 chassis for your duty cycle?</h3>
+        <p>Send us your GVWR or GCW target, terrain, body type and destination market axle laws. Our export engineering team will return an X6 frame, axle, suspension and PTO specification sheet sized to your operation, including the reinforced rail and 13T HD axle options.</p>
+        <a href="https://wa.me/8615319431311">Chat on WhatsApp</a>
+    </div>
+</div>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-main">
+            <div class="footer-col"><h3>PRODUCTS</h3><ul><li><a href="../products.html?cat=light">Light Duty</a></li><li><a href="../products.html?cat=medium">Medium Duty</a></li><li><a href="../products.html?cat=heavy">Heavy Duty</a></li><li><a href="../products.html?cat=offroad">Off-road</a></li></ul></div>
+            <div class="footer-col"><h3>RESOURCES</h3><ul><li><a href="index.html">Blog</a></li><li><a href="../news_list/81163.html">News</a></li><li><a href="../video_list.html">Videos</a></li></ul></div>
+            <div class="footer-col footer-contact"><h3>CONTACT US</h3><p class="hotline-number">+86 15319431311</p><p class="footer-email">sales@fenghan-trade.com</p></div>
+        </div>
+        <div class="footer-bottom"><div class="footer-copyright"><p>&copy;2026 Shaanxi Fenghan Trading Co., Ltd</p><p style="margin-top:6px;font-size:12px;">&#127760; Our Network: <a href="https://fenghan-trade.com/" target="_blank" rel="noopener" style="color:#C89B3C;">Fenghan Trade (SHACMAN/SAGMOTO)</a> &middot; <a href="https://dongfengevtrucks.com/" target="_blank" rel="noopener" style="color:#C89B3C;">EV Trucks — Dongfeng Electric</a></p></div></div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/whatsapp-float.js" async></script>
+</body>
+</html>
