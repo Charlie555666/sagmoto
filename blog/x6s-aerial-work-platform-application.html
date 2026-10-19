@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SAGMOTO X6s as an aerial work platform chassis: outrigger loads, stability math, PTO hydraulics, subframe and axle-load checks for boom bodies.">
+    <meta name="keywords" content="SAGMOTO X6s, aerial work platform chassis, truck mounted cherry picker, boom lift chassis, outrigger load, WP12.480, PTO hydraulic, 2200 Nm">
+    <meta property="og:title" content="SAGMOTO X6s as an Aerial Work Platform Chassis: Outrigger Loads and Stability Math">
+    <meta property="og:description" content="SAGMOTO X6s as an aerial work platform chassis: outrigger loads, stability math, PTO hydraulics, subframe and axle-load checks for boom bodies.">
+    <meta property="og:image" content="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="geo.region" content="CN"/>
+    <meta name="geo.placename" content="Xi'an, Shaanxi, China"/>
+    <meta name="geo.position" content="34.3416;108.9398"/>
+    <link rel="canonical" href="https://sagmoto-trucks.com/blog/x6s-aerial-work-platform-application.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="icon" href="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <title>SAGMOTO X6s as an Aerial Work Platform Chassis: Outrigger Loads and Stability Math | SAGMOTO Blog</title>
+    <style>
+        .article-container { max-width: 800px; margin: 80px auto 40px; padding: 0 20px; }
+        .article-header { margin-bottom: 40px; }
+        .article-header h1 { font-size: 32px; font-weight: 700; color: #1a1a2e; line-height: 1.3; margin-bottom: 16px; }
+        .article-meta { font-size: 13px; color: #999; display: flex; gap: 16px; flex-wrap: wrap; }
+        .article-body { font-size: 16px; line-height: 1.8; color: #333; }
+        .article-body h2 { font-size: 24px; font-weight: 700; color: #1a1a2e; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #f0f2f5; }
+        .article-body h3 { font-size: 20px; font-weight: 600; color: #333; margin: 28px 0 12px; }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { margin: 12px 0 20px 24px; }
+        .article-body li { margin-bottom: 8px; }
+        .article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+        .article-body table th { background: #1a1a2e; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .article-body table td { padding: 10px 14px; border-bottom: 1px solid #e8e8e8; }
+        .article-body table tr:nth-child(even) td { background: #f9fafb; }
+        .article-cta { background: #0f3460; color: #fff; padding: 32px; border-radius: 12px; text-align: center; margin: 40px 0; }
+        .article-cta h3 { color: #fff; margin-bottom: 12px; font-size: 20px; }
+        .article-cta p { color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+        .article-cta a { display: inline-block; background: #fff; color: #0f3460; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .key-point { background: #f0f4ff; border-left: 4px solid #0f3460; padding: 16px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        @media (max-width: 768px) { .article-header h1 { font-size: 24px; } .article-body { font-size: 15px; } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org", "@type": "Article",
+      "headline": "SAGMOTO X6s as an Aerial Work Platform Chassis: Outrigger Loads and Stability Math",
+      "description": "SAGMOTO X6s as an aerial work platform chassis: outrigger loads, stability math, PTO hydraulics, subframe and axle-load checks for boom bodies.",
+      "author": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "url": "https://sagmoto-trucks.com/" },
+      "publisher": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "logo": { "@type": "ImageObject", "url": "https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png" } },
+      "datePublished": "2026-10-19", "dateModified": "2026-10-19",
+      "mainEntityOfPage": { "@type": "WebPage", "id": "https://sagmoto-trucks.com/blog/x6s-aerial-work-platform-application.html" }
+    }
+    </script>
+</head>
+<body>
+<div class="e_container-2 transparent">
+    <div class="header-inner">
+        <div class="logo-area">
+            <a href="../index.html">
+                <img src="../images/sagmoto-original/7c996f42-7545-43cf-b326-fff928aa4f57.png" alt="SAGMOTO" class="logo-dark" loading="lazy">
+                <img src="../images/sagmoto-original/45799ffa-90f5-4dc5-8fc1-f0dd10445b52.png" alt="SAGMOTO" class="logo-light" loading="lazy">
+            </a>
+        </div>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+        <ul class="main-nav">
+            <li><a href="../products.html">PRODUCTS</a></li>
+            <li><a href="javascript:;">APPLICATIONS</a></li>
+            <li><a href="../service.html">SERVICES</a></li>
+            <li><a href="index.html" style="font-weight:700;color:#0f3460;">BLOG</a></li>
+            <li><a href="../news_list/81163.html">NEWS</a></li>
+            <li><a href="../about.html">ABOUT US</a></li>
+        </ul>
+    </div>
+</div>
+<div class="article-container">
+    <div class="article-header">
+        <h1>SAGMOTO X6s as an Aerial Work Platform Chassis: Outrigger Loads and Stability Math</h1>
+        <div class="article-meta"><span>2026-10-19</span><span>Industry Application</span><span>11 min read</span></div>
+    </div>
+    <div class="article-body">
+
+<h2>Aerial bodies invert the chassis design problem</h2>
+
+<p>A truck-mounted aerial work platform, sometimes called a cherry picker or boom lift, turns the usual truck design logic upside down. Most trucks carry their payload low and spread across the frame; an aerial body puts a heavy boom, turret and cage on top of the chassis, raises the centre of gravity dramatically, and then extends that mass out horizontally and vertically on a cantilever. The chassis is no longer just a means of transport. It is the foundation of a stability problem, and the moment the outriggers are set and the boom swings out, the truck becomes a calculating structure that must not tip.</p>
+
+<p>The SAGMOTO X6s is a strong foundation for this conversion. It is a heavy-duty platform powered by the Weichai WP12.480 engine producing 480 horsepower and 2,200 Newton-metres of torque, paired with the Fast Gear 12JS160TA manual transmission or the 12JZ160 automated manual transmission. That torque, available low in the rev range, gives the smooth low-speed control a bodybuilder needs during set-up, and the robust frame and axles take an aerial superstructure without compromise. This guide works through outrigger loads, stability math, PTO hydraulics, subframe design and the axle-load verification that turns an X6s into a safe, certifiable aerial platform.</p>
+
+<h2>Chassis selection by working height</h2>
+
+<p>Aerial platforms span a wide working-height range, and the chassis must match the body. The table below maps typical working heights to the X6s configuration and the resulting gross vehicle mass before the body is added.</p>
+
+<table>
+<thead>
+<tr><th>Working height</th><th>X6s configuration</th><th>Body and cage mass</th><th>Typical GVW</th><th>Outrigger spread needed</th></tr>
+</thead>
+<tbody>
+<tr><td>18 - 24 m</td><td>4x2, 18,000 kg GVW</td><td>3,500 - 5,000 kg</td><td>15,000 - 17,500 kg</td><td>4.0 - 4.8 m</td></tr>
+<tr><td>25 - 32 m</td><td>6x4, 25,000 kg GVW</td><td>5,500 - 7,500 kg</td><td>22,000 - 25,000 kg</td><td>4.8 - 5.6 m</td></tr>
+<tr><td>33 - 40 m</td><td>6x4, 26,000 kg GVW</td><td>7,500 - 9,500 kg</td><td>24,000 - 26,000 kg</td><td>5.4 - 6.2 m</td></tr>
+<tr><td>41 - 45 m</td><td>8x4, 32,000 - 34,000 kg GVW</td><td>9,500 - 12,000 kg</td><td>30,000 - 33,000 kg</td><td>6.0 - 7.0 m</td></tr>
+</tbody>
+</table>
+
+<p>The 4x2 X6s suits the lighter 18 to 24 metre class where a single front and tandem arrangement keeps mass down and manoeuvrability high in urban and indoor-access work. The 6x4 carries the mid-range booms where the extra driven axle spreads the turret load, and the 8x4 is the foundation for the 41 to 45 metre class where the superstructure mass alone approaches the payload of a small truck. A bodybuilder should select the chassis against the heaviest boom the operator expects to mount, not the average, because the stability margin shrinks as the boom extends.</p>
+
+<div class="key-point"><strong>Key point:</strong> Select the X6s against the heaviest boom, not the average one. A chassis sized to the average leaves no stability margin on the days the long boom is fully extended into a side wind, which is exactly when margin matters.</div>
+
+<h2>Outrigger loads and the stability calculation</h2>
+
+<p>Stability is the core discipline of any aerial platform. With the outriggers set, the vehicle is supported on four (or more) feet, and the tipping line runs between the two feet on the side toward which the boom is extending. The stabilising moment is the sum of outrigger reactions on the far side times their distance to the tipping line; the overturning moment is the combined weight of the superstructure, cage and occupant times the horizontal distance of the boom's centre of gravity from that same line. The machine is safe only while the stabilising moment exceeds the overturning moment by the required safety factor.</p>
+
+<p>In practice the bodybuilder computes, for every boom angle and extension, the load transferred to each outrigger. A 30 metre platform with a 300 kilogram cage load and a 7,000 kilogram superstructure, extended horizontally 14 metres from the turret, can place 30,000 to 50,000 Newtons on the two downwind outriggers and lift the upwind wheels clear of the ground. That is normal and safe only because the outrigger pads are sized and the ground beneath them is adequate. The chassis frame and the subframe must carry these alternating loads without permanent set, and the chassis must be specified so that even at maximum extension the stabilising moment holds the required factor of safety.</p>
+
+<table>
+<thead>
+<tr><th>Boom extension</th><th>Horizontal reach</th><th>Downwind outrigger load</th><th>Upwind wheel load</th><th>Stability status</th></tr>
+</thead>
+<tbody>
+<tr><td>40 percent</td><td>5 - 6 m</td><td>12 - 18 kN</td><td>Still loaded</td><td>Comfortable margin</td></tr>
+<tr><td>70 percent</td><td>10 - 11 m</td><td>22 - 30 kN</td><td>Near zero</td><td>Reduced margin</td></tr>
+<tr><td>100 percent, side</td><td>14 - 16 m</td><td>38 - 50 kN</td><td>Lifted</td><td>At rated limit</td></tr>
+<tr><td>100 percent, over front</td><td>12 - 14 m</td><td>34 - 44 kN</td><td>Front lifted</td><td>At rated limit</td></tr>
+</tbody>
+</table>
+
+<div class="key-point"><strong>Key point:</strong> The outrigger load at full side extension can be three to five times the static wheel load. Size the pads and verify the ground bearing pressure before every set-up; the chassis is only as stable as the surface under the feet.</div>
+
+<h2>PTO hydraulics: flow, pressure and the right take-off</h2>
+
+<p>An aerial platform is a hydraulic machine. The turret rotation, boom elevation, telescope, cage level and outrigger deployment are all hydraulic, driven from a power take-off on the X6s transmission or engine. The bodybuilder must specify the PTO to deliver both the flow and the pressure the body demands, because a boom that moves too slowly is an irritation and one that cannot hold a load is a hazard.</p>
+
+<p>A mid-range 25 to 32 metre platform typically requires a hydraulic flow of 60 to 110 litres per minute at a system pressure of 210 to 280 bar, with peaks to 320 bar during simultaneous boom and telescope motion under load. The X6s 480 hp engine has ample reserve to drive this through a transmission-mounted or engine-mounted PTO, provided the PTO torque rating and the pump displacement are matched. The key is to size the pump so that the required flow is available at an engine speed the operator can hold steadily during set-up, usually around 1,000 to 1,400 rpm, without racing the engine or stalling the hydraulics.</p>
+
+<h2>Subframe, torsion absorption and frame integrity</h2>
+
+<p>The aerial superstructure must not be bolted directly to the chassis frame without an engineered subframe. The chassis is designed to flex and twist as it travels over uneven ground; the boom turret demands a rigid, torsionally stable mounting. The subframe bridges the chassis rails, spreads the turret and outrigger loads into the frame at multiple points, and isolates the twisting of the road-going chassis from the precise geometry of the turret bearing.</p>
+
+<p>A well-designed subframe does three things. First, it transfers outrigger reaction loads into the chassis rails at reinforced points rather than at a single bolt. Second, it provides a stable, level reference for the turret so the boom geometry stays true. Third, it absorbs the relative twist between front and rear of the chassis when the vehicle is on uneven ground with outriggers set, preventing the frame from taking a permanent set that would later show up as a twisted body or a misaligned turret. Bodybuilders converting the X6s should treat the subframe as a structural engineering task, not a fabrication afterthought.</p>
+
+<h2>Axle-load verification with the body fitted</h2>
+
+<p>Mounting a heavy turret and boom shifts mass toward the rear and raises the centre of gravity, so the as-built axle loads must be verified against the legal limits, not estimated from the catalogue. The table below shows a representative as-built check for a 6x4 X6s with a 30 metre platform, against a 25,000 kg GVW limit.</p>
+
+<table>
+<thead>
+<tr><th>Axle</th><th>Legal limit</th><th>Measured, body stowed</th><th>Measured, outriggers set</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td>Front steer</td><td>7,500 kg</td><td>6,200 kg</td><td>4,100 kg (lifted)</td><td>Within limit</td></tr>
+<tr><td>Rear drive 1</td><td>11,500 kg</td><td>9,400 kg</td><td>10,600 kg</td><td>Within limit</td></tr>
+<tr><td>Rear drive 2</td><td>11,500 kg</td><td>8,900 kg</td><td>10,300 kg</td><td>Within limit</td></tr>
+<tr><td>Total GVW</td><td>25,000 kg</td><td>24,500 kg</td><td>25,000 kg</td><td>At limit, OK</td></tr>
+</tbody>
+</table>
+
+<p>The verification must be repeated with the body stowed for road travel and with the outriggers set for work, because the load path changes completely between the two states. A vehicle that is legal on the road can become illegally loaded on one axle once the outriggers transfer mass, and the bodybuilder's certification should state both conditions. Operators should keep the as-built axle weigh ticket with the vehicle and re-verify after any body modification.</p>
+
+<div class="key-point"><strong>Key point:</strong> Verify axle loads in both the road-travel and outrigger-set states. The legal limit applies to both, and the load path is completely different between them. A road-legal truck can be axle-overweight the moment the feet go down.</div>
+
+<h2>Job-site ground bearing requirements</h2>
+
+<p>The chassis is only as stable as the ground under the outrigger pads. A 50 kN outrigger load on a 0.5 square metre pad produces 100 kilopascals of bearing pressure; on soft ground, asphalt in summer heat or fill near a trench, that pressure can exceed what the surface will carry and the foot sinks, the chassis tilts, and the stability calculation collapses. The operator must assess the ground before set-up, use cribbing or larger pads on weak surfaces, and never extend over a void such as a trench or basement.</p>
+
+<p>The X6s's role here is to arrive and position reliably. Its 480 hp and 2,200 Nm give the low-speed control needed to creep into a tight urban bay or a constrained substation access, and its robust axles and tyres tolerate the marginal surfaces common on job sites. But positioning is a driver skill: the vehicle should be as level as the site allows before the outriggers are deployed, because the platform's own levelling range is finite and starting from a tilt wastes valuable stability margin.</p>
+
+<h2>Conclusion</h2>
+
+<p>The SAGMOTO X6s is a genuinely capable aerial work platform chassis. Its 480 hp WP12.480 engine and 2,200 Nm of torque give the low-speed control that bodybuilders and operators need, the Fast Gear 12JS160TA or 12JZ160 automated transmission suits stop-start set-up work, and its heavy frame and axle options take an 18 to 45 metre boom body without compromise. The capability of the truck, however, is only the foundation.</p>
+
+<p>The safe platform is the product of discipline: a chassis selected against the heaviest boom, outrigger loads computed and the ground verified beneath every foot, a PTO sized to the body's flow and pressure demand, an engineered subframe that isolates turret geometry from chassis twist, and axle loads verified in both travel and working states. Operators who master those elements turn the X6s into a productive, certifiable aerial platform; those who treat the conversion as a bolt-on turn it into a liability. Fleets running the X6s alongside the <a href="../off-road-4x4.html">SAGMOTO off-road 4x4 mining trucks</a> will also value the common Weichai drivetrain and shared service parts across the depot.</p>
+
+    </div>
+    <div class="article-cta">
+        <h3>Building an X6s aerial platform?</h3>
+        <p>Send us your target working height, boom mass and typical job-site ground conditions. Our export team will return an X6s chassis specification with axle-load budget, PTO requirement and a subframe and outrigger guidance note for your bodybuilder.</p>
+        <a href="https://wa.me/8615319431311">Chat on WhatsApp</a>
+    </div>
+</div>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-main">
+            <div class="footer-col"><h3>PRODUCTS</h3><ul><li><a href="../products.html?cat=light">Light Duty</a></li><li><a href="../products.html?cat=medium">Medium Duty</a></li><li><a href="../products.html?cat=heavy">Heavy Duty</a></li><li><a href="../products.html?cat=offroad">Off-road</a></li></ul></div>
+            <div class="footer-col"><h3>RESOURCES</h3><ul><li><a href="index.html">Blog</a></li><li><a href="../news_list/81163.html">News</a></li><li><a href="../video_list.html">Videos</a></li></ul></div>
+            <div class="footer-col footer-contact"><h3>CONTACT US</h3><p class="hotline-number">+86 15319431311</p><p class="footer-email">sales@fenghan-trade.com</p></div>
+        </div>
+        <div class="footer-bottom"><div class="footer-copyright"><p>&copy;2026 Shaanxi Fenghan Trading Co., Ltd</p><p style="margin-top:6px;font-size:12px;">&#127760; Our Network: <a href="https://fenghan-trade.com/" target="_blank" rel="noopener" style="color:#C89B3C;">Fenghan Trade (SHACMAN/SAGMOTO)</a> &middot; <a href="https://dongfengevtrucks.com/" target="_blank" rel="noopener" style="color:#C89B3C;">EV Trucks — Dongfeng Electric</a></p></div></div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/whatsapp-float.js" async></script>
+</body>
+</html>
