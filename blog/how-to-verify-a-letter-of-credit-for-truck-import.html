@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A field-by-field guide to checking an MT700 letter of credit for a China truck import, covering UCP 600, soft clauses, bank roles, discrepancy costs and documents.">
+    <meta name="keywords" content="letter of credit verification, MT700 fields, UCP 600, truck import from China, confirming bank, LC discrepancies">
+    <meta property="og:title" content="How to Verify a Letter of Credit for a Truck Import from China">
+    <meta property="og:description" content="A field-by-field guide to checking an MT700 letter of credit for a China truck import, covering UCP 600, soft clauses, bank roles, discrepancy costs and documents.">
+    <meta property="og:image" content="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="geo.region" content="CN"/>
+    <meta name="geo.placename" content="Xi'an, Shaanxi, China"/>
+    <meta name="geo.position" content="34.3416;108.9398"/>
+    <link rel="canonical" href="https://sagmoto-trucks.com/blog/how-to-verify-a-letter-of-credit-for-truck-import.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="icon" href="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <title>How to Verify a Letter of Credit for a Truck Import from China | SAGMOTO Blog</title>
+    <style>
+        .article-container { max-width: 800px; margin: 80px auto 40px; padding: 0 20px; }
+        .article-header { margin-bottom: 40px; }
+        .article-header h1 { font-size: 32px; font-weight: 700; color: #1a1a2e; line-height: 1.3; margin-bottom: 16px; }
+        .article-meta { font-size: 13px; color: #999; display: flex; gap: 16px; flex-wrap: wrap; }
+        .article-body { font-size: 16px; line-height: 1.8; color: #333; }
+        .article-body h2 { font-size: 24px; font-weight: 700; color: #1a1a2e; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #f0f2f5; }
+        .article-body h3 { font-size: 20px; font-weight: 600; color: #333; margin: 28px 0 12px; }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { margin: 12px 0 20px 24px; }
+        .article-body li { margin-bottom: 8px; }
+        .article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+        .article-body table th { background: #1a1a2e; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .article-body table td { padding: 10px 14px; border-bottom: 1px solid #e8e8e8; }
+        .article-body table tr:nth-child(even) td { background: #f9fafb; }
+        .article-cta { background: #0f3460; color: #fff; padding: 32px; border-radius: 12px; text-align: center; margin: 40px 0; }
+        .article-cta h3 { color: #fff; margin-bottom: 12px; font-size: 20px; }
+        .article-cta p { color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+        .article-cta a { display: inline-block; background: #fff; color: #0f3460; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .key-point { background: #f0f4ff; border-left: 4px solid #0f3460; padding: 16px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        @media (max-width: 768px) { .article-header h1 { font-size: 24px; } .article-body { font-size: 15px; } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org", "@type": "Article",
+      "headline": "How to Verify a Letter of Credit for a Truck Import from China", "description": "A field-by-field guide to checking an MT700 letter of credit for a China truck import, covering UCP 600, soft clauses, bank roles, discrepancy costs and documents.",
+      "author": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "url": "https://sagmoto-trucks.com/" },
+      "publisher": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "logo": { "@type": "ImageObject", "url": "https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png" } },
+      "datePublished": "2026-11-17", "dateModified": "2026-11-17",
+      "mainEntityOfPage": { "@type": "WebPage", "id": "https://sagmoto-trucks.com/blog/how-to-verify-a-letter-of-credit-for-truck-import.html" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a typical presentation period in an MT700?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A typical presentation period is 15 to 21 days after the bill of lading date, although field 48 can set a longer or shorter window. For a truck shipment from China, buyers should allow enough time for the exporter to gather an inspection certificate and an original bill of lading after loading." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a bank have to examine documents?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Under UCP 600 an examining bank has a maximum of five banking days to check a presentation and decide whether it is compliant. That clock starts on the day of presentation, so a document set sent late in the week can consume most of the allowance before a discrepancy is even reported." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a discrepancy cost the seller?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A discrepancy commonly triggers a bank fee of roughly 50 to 150 US dollars plus delay, while the goods may accrue port demurrage during the waiver decision. Because the applicant is not obliged to accept a waiver, a single mismatched field can leave the seller unpaid for several weeks." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which MT700 fields matter most for a truck order?",
+          "acceptedAnswer": { "@type": "Answer", "text": "At least seven fields deserve close review: the applicant, beneficiary, 44E loading port, 45A goods description, 46A documents, 47A additional conditions and 48 presentation period. Together they define who is paid, what must be shipped and what evidence proves it." }
+        },
+        {
+          "@type": "Question",
+          "name": "When should a buyer pay for a confirming bank?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Confirmation is worth considering when the issuing bank is in a market with currency controls or elevated country risk, with a commission often near 0.5 to 2 percent of the credit value. The buyer should weigh that cost against the certainty of a second bank undertaking to pay a complying presentation." }
+        }
+      ]
+    }
+    </script>
+
+</head>
+<body>
+<div class="e_container-2 transparent">
+    <div class="header-inner">
+        <div class="logo-area">
+            <a href="../index.html">
+                <img src="../images/sagmoto-original/7c996f42-7545-43cf-b326-fff928aa4f57.png" alt="SAGMOTO" class="logo-dark" loading="lazy">
+                <img src="../images/sagmoto-original/45799ffa-90f5-4dc5-8fc1-f0dd10445b52.png" alt="SAGMOTO" class="logo-light" loading="lazy">
+            </a>
+        </div>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+        <ul class="main-nav">
+            <li><a href="../products.html">PRODUCTS</a></li>
+            <li><a href="javascript:;">APPLICATIONS</a></li>
+            <li><a href="../service.html">SERVICES</a></li>
+            <li><a href="index.html" style="font-weight:700;color:#0f3460;">BLOG</a></li>
+            <li><a href="../news_list/81163.html">NEWS</a></li>
+            <li><a href="../about.html">ABOUT US</a></li>
+        </ul>
+    </div>
+</div>
+<div class="article-container">
+    <div class="article-header">
+        <h1>How to Verify a Letter of Credit for a Truck Import from China</h1>
+        <div class="article-meta"><span>2026-11-17</span><span>Buyer Decision</span><span>10 min read</span></div>
+    </div>
+    <div class="article-body">
+<p>Quick answer: Verify a truck import letter of credit by reading every MT700 field against the signed proforma before the goods are built, checking the beneficiary name, 44E loading port, 45A description, 46A documents, 47A conditions and 48 presentation period, then confirming the issuing bank through an independent channel.</p>
+
+<h2>Which MT700 fields need a line-by-line check</h2>
+<p>A letter of credit is a conditional promise to pay, and the condition is that the documents match the credit exactly. The message that carries the credit between banks is usually an MT700, and each numbered field controls a different part of the obligation. A buyer importing trucks from China should read the entire message against the proforma invoice before production starts, because a mismatch discovered after shipment is far harder to correct than one caught at the draft stage.</p>
+<p>The most consequential fields are the applicant and beneficiary details, the 44E port of loading, the 45A description of goods, the 46A list of required documents, the 47A additional conditions and the 48 presentation period. Field 31D sets the expiry date and place, field 42C governs the tenor of any draft, and field 43P states whether partial shipments are allowed. A truck order shipped in two lots under a credit that forbids partial shipments is a straightforward discrepancy, so these apparently minor fields deserve as much attention as the value.</p>
+<table>
+<thead><tr><th>Field</th><th>What it controls</th><th>Common fault</th></tr></thead>
+<tbody>
+<tr><td>Applicant and beneficiary</td><td>Who pays and who is paid</td><td>Name spelling differs from registration</td></tr>
+<tr><td>44E</td><td>Port of loading</td><td>Named port cannot be met</td></tr>
+<tr><td>45A</td><td>Goods description</td><td>Does not match the proforma</td></tr>
+<tr><td>46A</td><td>Required documents</td><td>Document impossible to obtain</td></tr>
+<tr><td>47A</td><td>Additional conditions</td><td>Hidden clause contradicts 46A</td></tr>
+<tr><td>48</td><td>Presentation period</td><td>Too short after bill of lading</td></tr>
+</tbody>
+</table>
+
+<h2>How should the names and ports be checked</h2>
+<p>The beneficiary name must match the exporter's legal registration character for character, including punctuation and any words such as limited or company. A single missing letter can cause a bank to refuse the documents, because banks compare text rather than intent. The same discipline applies to the applicant, especially where a buying office and a parent company are both involved in the order, and the buyer should decide at the draft stage which entity will appear on the credit.</p>
+<p>Field 44E names the port of loading, and it should reflect a port the seller can actually use for the truck shipment. Nearest-port wording is safer than a fixed port where routing may change because of capacity or congestion. If the credit names a port that the seller cannot reach within the production window, the buyer must amend the credit before goods are handed to the carrier, otherwise the bill of lading will contradict the terms.</p>
+
+<h2>Why the 45A description must match the proforma</h2>
+<p>Field 45A is the statement of goods, and the commercial invoice must mirror it in substance. For a truck order that means the model, engine rating, drive configuration, quantity, unit price and trade term should appear in both documents with the same meaning. An invoice that describes a vehicle more generally than the credit, or that adds a model designation the credit does not list, gives an examining bank a reason to question the presentation.</p>
+<p>The practical method is to draft field 45A from the proforma itself rather than retyping it. Both parties should initial the same goods description and use that text as the source for the credit application, the invoice and the packing list. Where the order covers several models in different quantities, the schedule should be set out identically in every document, because a transposed figure between the credit and the invoice is one of the most common discrepancies in vehicle shipments.</p>
+<div class="key-point"><p><strong>Copy the proforma:</strong> Draft field 45A directly from the signed proforma and reuse that exact wording on the commercial invoice. A rewritten description or a transposed quantity is enough for an examining bank to refuse a truck shipment.</p></div>
+
+<h2>What documents does field 46A usually demand</h2>
+<p>Field 46A lists the documents the beneficiary must present, and each one must be obtainable within the presentation period. A typical truck import set includes a signed commercial invoice, a full set of original bills of lading, a packing list, a certificate of origin, an insurance certificate where the trade term requires it, and an inspection certificate if the buyer or a regulator demands pre-shipment verification. A pre-shipment inspection certificate may be issued by an independent surveyor who checks the vehicles before loading.</p>
+<p>Preference-origin documents need special care. Form A or a free-trade-agreement certificate of origin may reduce duty in the destination market, but the credit must name the exact document and the issuing authority, and the exporter must be able to obtain it from the relevant chamber. A buyer who wants a reduced duty rate should confirm the certificate format with customs before finalising 46A, because a document that is acceptable to a bank may still be rejected by the importing authority.</p>
+<table>
+<thead><tr><th>Document</th><th>Purpose</th><th>Check before shipment</th></tr></thead>
+<tbody>
+<tr><td>Bill of lading</td><td>Title and carriage terms</td><td>Consignee and notify party</td></tr>
+<tr><td>Commercial invoice</td><td>Value and goods description</td><td>Matches 45A exactly</td></tr>
+<tr><td>Packing list</td><td>Contents and weights</td><td>Quantities match invoice</td></tr>
+<tr><td>Certificate of origin</td><td>Source and duty treatment</td><td>Issuing authority named</td></tr>
+<tr><td>Insurance certificate</td><td>Cargo cover</td><td>Required by trade term</td></tr>
+<tr><td>Inspection certificate</td><td>Pre-shipment verification</td><td>Named surveyor available</td></tr>
+</tbody>
+</table>
+
+<h2>Are soft clauses and 47A conditions a red flag</h2>
+<p>Field 47A can carry additional conditions that override or add to the main terms, and some of them are harmless while others shift risk back to the seller. A soft clause is a condition that makes payment dependent on an event controlled by the applicant, such as a further inspection approval or a statement that goods have been cleared by a named authority. Because the beneficiary cannot guarantee that event, the credit stops behaving like a bank undertaking and becomes contingent on the buyer's cooperation.</p>
+<p>Common red flags include a requirement for a document to be issued and signed by the applicant, a clause stating that payment is subject to funds being received from an end buyer, or a condition that a third party must confirm quality after arrival. Each should be removed or reworded before shipment. A genuine quality requirement can usually be met with an independent inspection certificate at loading, which gives the buyer evidence without making the seller's payment uncertain.</p>
+<div class="key-point"><p><strong>Spot the soft clause:</strong> Any 47A condition that makes payment depend on the applicant's own approval or on funds from a third party defeats the purpose of the credit. Replace it with an independent inspection certificate at loading.</p></div>
+
+<h2>What is the difference between an advising and a confirming bank</h2>
+<p>An advising bank simply passes the credit to the beneficiary and authenticates the message, but it gives no payment undertaking of its own. A confirming bank adds its own promise to honour a complying presentation, which removes the risk that the issuing bank or its country will fail to pay. Confirmation works like credit insurance priced as a commission.</p>
+
+<h2>When do back-to-back and transferable credits apply</h2>
+<p>A back-to-back credit is used when an intermediary receives a credit from an end buyer and opens a second credit in favour of the actual supplier, using the first as collateral. A transferable credit allows the first beneficiary to transfer all or part of the credit to a second beneficiary, and it must be expressly marked as transferable in the MT700. Both structures appear in trading-company transactions, where the party on the credit is not the factory that builds the trucks.</p>
+
+<h2>What do discrepancies cost in practice</h2>
+<p>When an examining bank finds a mismatch, it may refuse the documents or seek the applicant's waiver. Banks typically charge a discrepancy fee, often in the range of 50 to 150 US dollars, and the applicant may take days to decide whether to accept. During that period the goods may be sitting at the port accruing demurrage, and the seller loses access to the payment even though the trucks were shipped as ordered.</p>
+
+<h2>How should a buyer handle the final document set</h2>
+<p>Once the credit is agreed, the buyer should keep one controlled copy of the MT700 and the proforma, and use that pair as the reference for every document check. When documents arrive, they should be reviewed in the order set out in 46A, with the invoice checked against 45A first and the transport document checked against 44E and the latest shipment date. Any correction means issuing a fresh document rather than altering an original, because banks will not accept an unauthenticated change.</p>
+<p>Buyers sourcing from China can consult the <a href="../authorized-heavy-truck-distributor-china.html">authorized heavy truck distributor China reference</a> to confirm the exporter's credentials before opening a credit, since the payment mechanism protects the documents but does not verify the counterparty. Verification of the company and the credit are two separate checks, and both should be completed before a deposit or a shipment is committed.</p>
+
+<h2>Frequently Asked Questions</h2>
+<h3>What is a typical presentation period in an MT700?</h3>
+<p>A typical presentation period is 15 to 21 days after the bill of lading date, although field 48 can set a longer or shorter window. For a truck shipment from China, buyers should allow enough time for the exporter to gather an inspection certificate and an original bill of lading after loading.</p>
+<h3>How long does a bank have to examine documents?</h3>
+<p>Under UCP 600 an examining bank has a maximum of five banking days to check a presentation and decide whether it is compliant. That clock starts on the day of presentation, so a document set sent late in the week can consume most of the allowance before a discrepancy is even reported.</p>
+<h3>What does a discrepancy cost the seller?</h3>
+<p>A discrepancy commonly triggers a bank fee of roughly 50 to 150 US dollars plus delay, while the goods may accrue port demurrage during the waiver decision. Because the applicant is not obliged to accept a waiver, a single mismatched field can leave the seller unpaid for several weeks.</p>
+<h3>Which MT700 fields matter most for a truck order?</h3>
+<p>At least seven fields deserve close review: the applicant, beneficiary, 44E loading port, 45A goods description, 46A documents, 47A additional conditions and 48 presentation period. Together they define who is paid, what must be shipped and what evidence proves it.</p>
+<h3>When should a buyer pay for a confirming bank?</h3>
+<p>Confirmation is worth considering when the issuing bank is in a market with currency controls or elevated country risk, with a commission often near 0.5 to 2 percent of the credit value. The buyer should weigh that cost against the certainty of a second bank undertaking to pay a complying presentation.</p>
+    </div>
+    <div class="article-cta">
+        <h3>Get the paperwork right before shipment</h3>
+        <p>Review your LC draft with Fenghan Trading and message us on WhatsApp to align the proforma, documents and delivery schedule.</p>
+        <a href="https://wa.me/8615319431311">Chat on WhatsApp</a>
+    </div>
+</div>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-main">
+            <div class="footer-col"><h3>PRODUCTS</h3><ul><li><a href="../products.html?cat=light">Light Duty</a></li><li><a href="../products.html?cat=medium">Medium Duty</a></li><li><a href="../products.html?cat=heavy">Heavy Duty</a></li><li><a href="../products.html?cat=offroad">Off-road</a></li></ul></div>
+            <div class="footer-col"><h3>RESOURCES</h3><ul><li><a href="index.html">Blog</a></li><li><a href="../news_list/81163.html">News</a></li><li><a href="../video_list.html">Videos</a></li></ul></div>
+            <div class="footer-col footer-contact"><h3>CONTACT US</h3><p class="hotline-number">+86 15319431311</p><p class="footer-email">sales@fenghan-trade.com</p></div>
+        </div>
+        <div class="footer-bottom"><div class="footer-copyright"><p>&copy;2026 Shaanxi Fenghan Trading Co., Ltd</p><p style="margin-top:6px;font-size:12px;">&#127760; Our Network: <a href="https://fenghan-trade.com/" target="_blank" rel="noopener" style="color:#C89B3C;">Fenghan Trade (SHACMAN/SAGMOTO)</a> &middot; <a href="https://dongfengevtrucks.com/" target="_blank" rel="noopener" style="color:#C89B3C;">EV Trucks — Dongfeng Electric</a></p></div></div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/whatsapp-float.js" async></script>
+</body>
+</html>
