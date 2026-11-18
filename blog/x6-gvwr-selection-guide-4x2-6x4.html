@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How GVWR and axle limits decide whether a SAGMOTO X6 should be 4x2 or 6x4: payload maths, tare, turning circle, fuel and the regulations that bind first.">
+    <meta name="keywords" content="SAGMOTO X6 GVWR, 4x2 vs 6x4 truck, X6 payload, Cummins ISM11E5 440HP, ZF 16-speed, rigid truck configuration, axle load distribution, distribution truck">
+    <meta property="og:title" content="SAGMOTO X6 GVWR Guide: Choosing 4x2 or 6x4 for Your Payload">
+    <meta property="og:description" content="How GVWR and axle limits decide whether a SAGMOTO X6 should be 4x2 or 6x4: payload maths, tare, turning circle, fuel and the regulations that bind first.">
+    <meta property="og:image" content="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="geo.region" content="CN"/>
+    <meta name="geo.placename" content="Xi'an, Shaanxi, China"/>
+    <meta name="geo.position" content="34.3416;108.9398"/>
+    <link rel="canonical" href="https://sagmoto-trucks.com/blog/x6-gvwr-selection-guide-4x2-6x4.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="icon" href="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <title>SAGMOTO X6 GVWR Guide: Choosing 4x2 or 6x4 for Your Payload | SAGMOTO Blog</title>
+    <style>
+        .article-container { max-width: 800px; margin: 80px auto 40px; padding: 0 20px; }
+        .article-header { margin-bottom: 40px; }
+        .article-header h1 { font-size: 32px; font-weight: 700; color: #1a1a2e; line-height: 1.3; margin-bottom: 16px; }
+        .article-meta { font-size: 13px; color: #999; display: flex; gap: 16px; flex-wrap: wrap; }
+        .article-body { font-size: 16px; line-height: 1.8; color: #333; }
+        .article-body h2 { font-size: 24px; font-weight: 700; color: #1a1a2e; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #f0f2f5; }
+        .article-body h3 { font-size: 20px; font-weight: 600; color: #333; margin: 28px 0 12px; }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { margin: 12px 0 20px 24px; }
+        .article-body li { margin-bottom: 8px; }
+        .article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+        .article-body table th { background: #1a1a2e; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .article-body table td { padding: 10px 14px; border-bottom: 1px solid #e8e8e8; }
+        .article-body table tr:nth-child(even) td { background: #f9fafb; }
+        .article-cta { background: #0f3460; color: #fff; padding: 32px; border-radius: 12px; text-align: center; margin: 40px 0; }
+        .article-cta h3 { color: #fff; margin-bottom: 12px; font-size: 20px; }
+        .article-cta p { color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+        .article-cta a { display: inline-block; background: #fff; color: #0f3460; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .key-point { background: #f0f4ff; border-left: 4px solid #0f3460; padding: 16px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        @media (max-width: 768px) { .article-header h1 { font-size: 24px; } .article-body { font-size: 15px; } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org", "@type": "Article",
+      "headline": "SAGMOTO X6 GVWR Guide: Choosing 4x2 or 6x4 for Your Payload", "description": "How GVWR and axle limits decide whether a SAGMOTO X6 should be 4x2 or 6x4: payload maths, tare, turning circle, fuel and the regulations that bind first.",
+      "author": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "url": "https://sagmoto-trucks.com/" },
+      "publisher": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "logo": { "@type": "ImageObject", "url": "https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png" } },
+      "datePublished": "2026-11-18", "dateModified": "2026-11-18",
+      "mainEntityOfPage": { "@type": "WebPage", "id": "https://sagmoto-trucks.com/blog/x6-gvwr-selection-guide-4x2-6x4.html" }
+    }
+    </script>
+</head>
+<body>
+<div class="e_container-2 transparent">
+    <div class="header-inner">
+        <div class="logo-area">
+            <a href="../index.html">
+                <img src="../images/sagmoto-original/7c996f42-7545-43cf-b326-fff928aa4f57.png" alt="SAGMOTO" class="logo-dark" loading="lazy">
+                <img src="../images/sagmoto-original/45799ffa-90f5-4dc5-8fc1-f0dd10445b52.png" alt="SAGMOTO" class="logo-light" loading="lazy">
+            </a>
+        </div>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+        <ul class="main-nav">
+            <li><a href="../products.html">PRODUCTS</a></li>
+            <li><a href="javascript:;">APPLICATIONS</a></li>
+            <li><a href="../service.html">SERVICES</a></li>
+            <li><a href="index.html" style="font-weight:700;color:#0f3460;">BLOG</a></li>
+            <li><a href="../news_list/81163.html">NEWS</a></li>
+            <li><a href="../about.html">ABOUT US</a></li>
+        </ul>
+    </div>
+</div>
+<div class="article-container">
+    <div class="article-header">
+        <h1>SAGMOTO X6 GVWR Guide: Choosing 4x2 or 6x4 for Your Payload</h1>
+        <div class="article-meta"><span>2026-11-18</span><span>Product Deep Dive</span><span>9 min read</span></div>
+    </div>
+    <div class="article-body">
+<p>GVWR is the least understood number on a truck specification and the one that decides whether a fleet makes money. Buyers compare horsepower, cab size and price, then discover after the first weighbridge that the configuration they chose cannot legally carry the payload their contract requires. On the SAGMOTO X6 the choice between 4x2 and 6x4 is exactly this decision: not a preference, but a calculation driven by payload, tare and the axle limits of the market the truck will work in.</p>
+
+<p>The X6 is the versatile mid-premium platform in the range, running the Cummins ISM11E5 at 440 horsepower and 2,100 Nm with a ZF 16-speed transmission. It is available as a 4x2 rigid, a 6x4 rigid and a 6x4 tractor, and the same engine and cab serve all three. That makes it the ideal platform on which to understand GVWR properly, because the powertrain is constant and the configuration is the only variable.</p>
+
+<div class="key-point"><strong>Key point:</strong> GVWR is a legal and structural ceiling set by the weakest axle, not by the engine. A 4x2 X6 typically lands at 16 to 18 tonnes GVWR with 9 to 12 tonnes payload; a 6x4 X6 lands at 25 to 26 tonnes GVWR with 15 to 18 tonnes payload. Choose from the payload the contract needs, then check the axles against local limits.</div>
+
+<h2>What GVWR certifies, and what it does not</h2>
+
+<p>Gross vehicle weight rating is the maximum total weight of the vehicle including chassis, body, fuel, driver and payload. It is set by the manufacturer according to the structural capacity of the frame, the axles, the springs, the brakes and the tyres — whichever is weakest. It is not a recommendation and it is not a target; it is a limit, and exceeding it is both a legal and a durability problem.</p>
+
+<p>Three related numbers matter alongside it. The gross combination weight rating applies when the truck pulls a trailer. The axle weight ratings set the limit at each axle, and on most trucks they are the binding constraint long before the GVWR is reached. And the tare weight is what the truck weighs empty, which is what you subtract from GVWR to find the payload the body can be designed around. A truck with a generous GVWR and a heavy tare can have less usable payload than a lighter truck with a lower rating.</p>
+
+<h2>4x2 versus 6x4, axle by axle</h2>
+
+<table>
+<tr><th>Item</th><th>X6 4x2 rigid</th><th>X6 6x4 rigid</th><th>X6 6x4 tractor</th></tr>
+<tr><td>Configuration</td><td>Single rear axle</td><td>Tandem rear axle</td><td>Tandem rear axle, fifth wheel</td></tr>
+<tr><td>Typical GVWR</td><td>16,000 - 18,000 kg</td><td>25,000 - 26,000 kg</td><td>25,000 kg (GCW 40 - 49 t)</td></tr>
+<tr><td>Typical tare (chassis-cab)</td><td>6,500 - 7,500 kg</td><td>9,500 - 10,500 kg</td><td>8,800 - 9,800 kg</td></tr>
+<tr><td>Usable payload</td><td>9,000 - 11,500 kg</td><td>14,500 - 16,500 kg</td><td>Trailer dependent</td></tr>
+<tr><td>Turning circle</td><td>Tightest</td><td>Larger by 2 - 3 m</td><td>Largest</td></tr>
+<tr><td>Fuel at 60 km/h laden</td><td>Lowest</td><td>6 - 10% higher</td><td>Highest per tonne-km at light load</td></tr>
+<tr><td>Best for</td><td>Urban and regional distribution</td><td>Heavy rigid distribution, tanker, tipper</td><td>Long haul, trailer combinations</td></tr>
+</table>
+
+<p>The table explains the whole decision. The 6x4 carries roughly 5 tonnes more payload than the 4x2, at the cost of a larger turning circle, 6 to 10 percent more fuel at the same speed and a higher tare. If the contract needs 16 tonnes per trip, the 6x4 is the only option. If it needs 9 tonnes, the 4x2 does the job with lower fuel and better access, and buying the 6x4 simply moves money from the fuel budget into unused capability.</p>
+
+<h2>The payload maths that decides it</h2>
+
+<p>Start from the contract, not the truck. Take the required delivered tonnes per day, divide by the number of trips the route allows, and you have the payload per trip. Add a 5 percent margin for load variation and then work back: payload plus tare equals the required GVWR, and that number decides the configuration.</p>
+
+<p>Worked example: a distributor needs 90 tonnes delivered per day on a 120 km round trip that allows five trips. That is 18 tonnes per trip. A 6x4 X6 with a 10,000 kg tare needs a 28 tonne GVWR to carry 18 tonnes, which is above the 26 tonne rating, so either the payload comes down to 16 tonnes with six trips, or a heavier platform is required. A 4x2 at 10 tonnes per trip would need nine trips, which the route cannot support. The arithmetic points to the 6x4 with an adjusted trip plan, and it takes ten minutes to do before ordering rather than after delivery.</p>
+
+<div class="key-point"><strong>Key point:</strong> Work backwards from delivered tonnes per day, not forwards from the truck. Payload per trip plus tare gives the GVWR you actually need, and that number — not the brochure — decides 4x2 or 6x4.</div>
+
+<h2>Tare is where payload quietly disappears</h2>
+
+<p>Every kilogram of body, tank, crane or refrigeration equipment reduces payload one for one. On a 4x2 X6 with an 11,500 kg payload budget, fitting a 1,200 kg refrigerated body instead of a 700 kg dry box removes half a tonne of payload, which is 4 percent of revenue capacity. On a 6x4 the same absolute loss is a smaller percentage but the same money.</p>
+
+<p>The discipline is to specify the body and the auxiliary equipment before fixing the GVWR, then confirm the resulting tare with a weighbridge rather than a calculation. Body builders' tare figures are optimistic by 3 to 8 percent in practice, and that error comes straight out of payload on every trip for the life of the truck. Weighing the first completed unit is the cheapest audit available.</p>
+
+<h2>Regulation, axle limits and bridge formulae</h2>
+
+<p>Local axle limits can make a legal GVWR unusable. A market that permits 10 tonnes on a single drive axle caps a 4x2 at roughly 17 tonnes gross once the steering axle is counted, whatever the plate says. A market that permits 18 to 20 tonnes on a tandem lets the 6x4 use most of its rating. Bridge formulae, which limit weight per unit of axle spacing, can bind further on a short-wheelbase 6x4.</p>
+
+<p>Before ordering, take the local axle limits and the bridge formula (where it applies) and check the proposed configuration against them at the intended payload. If the tandem limit binds, the answer is often a longer wheelbase or a wider axle spread rather than a smaller body. Buyers who want the underlying method can read <a href="../blog/what-axle-load-limits-mean-for-truck-buyers.html">what axle load limits mean for truck buyers</a> for a worked example.</p>
+
+<h2>Operating cost beyond the sticker</h2>
+
+<p>The 6x4 costs more to buy, more to fuel per kilometre and more to tyre — ten wheels instead of six. Against that it carries 5 tonnes more and it puts that load through two drive axles, which halves the stress per axle and extends tyre and driveline life on poor roads. On a rough regional route the 6x4 often wins on tyre cost per tonne despite having more tyres, because each tyre works less hard.</p>
+
+<p>The 4x2 wins on urban work where access and turning circle dominate, and where the payload requirement is modest. It also wins on fuel per delivered tonne when it is properly loaded, because it is not carrying the mass of an extra axle and a longer chassis for a payload it does not need. The mistake in both directions is buying capability that the contract does not use. For the full configuration and body options, see the <a href="../qyc.html">SAGMOTO tractor trucks prime mover</a> and <a href="../zhc.html">SAGMOTO cargo truck flatbed box stake</a> ranges, which list the 4x2 and 6x4 variants with their tare figures.</p>
+
+<h2>Tractor, rigid or both: the combination maths</h2>
+
+<p>The same GVWR logic extends to the tractor version, where the binding limit becomes gross combination weight rather than gross vehicle weight. An X6 6x4 tractor plated at 25 tonnes GVW can pull a combination of 40 to 49 tonnes GCW depending on the market and the trailer specification, which is why tractors dominate long-haul while rigids dominate distribution.</p>
+
+<p>The choice between a rigid and a tractor is a question of route and load profile, not of preference. A rigid carries its own body and is independent; a tractor needs a trailer for every load and depends on trailer availability, but it converts capital into flexible capacity because the trailer mix can change with the contract. For a distributor with a stable product range, two 6x4 rigids usually beat one tractor and three trailers on simplicity; for a haulier chasing varied contracts, the tractor wins on flexibility.</p>
+
+<div class="key-point"><strong>Key point:</strong> Rigid or tractor is a flexibility decision. Rigids are self-contained and simpler to operate; tractors convert one power unit into many trailer combinations. Decide from how much your load profile will change over five years.</div>
+
+<h2>Fuel, tyres and the cost per delivered tonne</h2>
+
+<p>Comparing a 4x2 and a 6x4 on litres per 100 km is misleading, because they carry different loads. The only useful comparison is cost per delivered tonne-kilometre. A 4x2 at 24 litres per 100 km carrying 10 tonnes is 2.4 litres per tonne per 100 km. A 6x4 at 30 litres per 100 km carrying 16 tonnes is 1.88 litres per tonne per 100 km. On that basis the 6x4 is the more efficient truck, even though it burns more fuel per kilometre.</p>
+
+<p>Tyres follow the same logic. The 6x4 has ten wheels against six, so tyre cost per kilometre is higher, but it carries 60 percent more payload, so tyre cost per tonne-kilometre is usually lower. On poor roads the advantage widens further, because the tandem shares the load and each tyre works less hard than the single rear tyres of a fully loaded 4x2. The 4x2 only wins when the payload requirement is genuinely modest and the route is urban, where its turning circle and lower tare matter more than its payload ceiling.</p>
+
+<h2>Conclusion</h2>
+
+<p>GVWR selection on the X6 is a four-step calculation: derive payload per trip from the contract, add realistic tare including body and equipment, check the result against local axle limits and any bridge formula, then choose the configuration that satisfies all three with a small margin. The 4x2 serves urban and regional distribution at 9 to 11.5 tonnes payload with the lowest fuel and the tightest turning circle. The 6x4 serves heavy rigid work at 14.5 to 16.5 tonnes with better load sharing on poor roads. Decide from the delivered tonnes, verify the tare on a weighbridge, and the truck will earn from the first trip instead of being renegotiated after the first fine.</p>
+    </div>
+    <div class="article-cta">
+        <h3>Not sure whether you need 4x2 or 6x4?</h3>
+        <p>Send us your daily tonnage, route length, body type and local axle limits. We will work the payload maths and quote the X6 configuration that fits without over-specifying.</p>
+        <a href="https://wa.me/8615319431311">Chat on WhatsApp</a>
+    </div>
+</div>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-main">
+            <div class="footer-col"><h3>PRODUCTS</h3><ul><li><a href="../products.html?cat=light">Light Duty</a></li><li><a href="../products.html?cat=medium">Medium Duty</a></li><li><a href="../products.html?cat=heavy">Heavy Duty</a></li><li><a href="../products.html?cat=offroad">Off-road</a></li></ul></div>
+            <div class="footer-col"><h3>RESOURCES</h3><ul><li><a href="index.html">Blog</a></li><li><a href="../news_list/81163.html">News</a></li><li><a href="../video_list.html">Videos</a></li></ul></div>
+            <div class="footer-col footer-contact"><h3>CONTACT US</h3><p class="hotline-number">+86 15319431311</p><p class="footer-email">sales@fenghan-trade.com</p></div>
+        </div>
+        <div class="footer-bottom"><div class="footer-copyright"><p>&copy;2026 Shaanxi Fenghan Trading Co., Ltd</p><p style="margin-top:6px;font-size:12px;">&#127760; Our Network: <a href="https://fenghan-trade.com/" target="_blank" rel="noopener" style="color:#C89B3C;">Fenghan Trade (SHACMAN/SAGMOTO)</a> &middot; <a href="https://dongfengevtrucks.com/" target="_blank" rel="noopener" style="color:#C89B3C;">EV Trucks — Dongfeng Electric</a></p></div></div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/whatsapp-float.js" async></script>
+</body>
+</html>
