@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SAGMOTO Z3 driveshaft deep dive: universal joints, slip splines, driveline angles and balancing for the 520HP Cummins M13 6x4 long haul tractor fleets.">
+    <meta name="keywords" content="SAGMOTO Z3, driveshaft, universal joint, slip spline, driveline angle, vibration, 520 HP, 6x4 tractor">
+    <meta property="og:title" content="SAGMOTO Z3 Driveshaft Deep Dive: U-Joints, Slip Splines and Driveline Balance">
+    <meta property="og:description" content="SAGMOTO Z3 driveshaft deep dive: universal joints, slip splines, driveline angles and balancing for the 520HP Cummins M13 6x4 long haul tractor fleets.">
+    <meta property="og:image" content="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="geo.region" content="CN"/>
+    <meta name="geo.placename" content="Xi'an, Shaanxi, China"/>
+    <meta name="geo.position" content="34.3416;108.9398"/>
+    <link rel="canonical" href="https://sagmoto-trucks.com/blog/z3-driveshaft-deep-dive.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="icon" href="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <title>SAGMOTO Z3 Driveshaft Deep Dive: U-Joints, Slip Splines and Driveline Balance | SAGMOTO Blog</title>
+    <style>
+        .article-container { max-width: 800px; margin: 80px auto 40px; padding: 0 20px; }
+        .article-header { margin-bottom: 40px; }
+        .article-header h1 { font-size: 32px; font-weight: 700; color: #1a1a2e; line-height: 1.3; margin-bottom: 16px; }
+        .article-meta { font-size: 13px; color: #999; display: flex; gap: 16px; flex-wrap: wrap; }
+        .article-body { font-size: 16px; line-height: 1.8; color: #333; }
+        .article-body h2 { font-size: 24px; font-weight: 700; color: #1a1a2e; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #f0f2f5; }
+        .article-body h3 { font-size: 20px; font-weight: 600; color: #333; margin: 28px 0 12px; }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { margin: 12px 0 20px 24px; }
+        .article-body li { margin-bottom: 8px; }
+        .article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+        .article-body table th { background: #1a1a2e; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .article-body table td { padding: 10px 14px; border-bottom: 1px solid #e8e8e8; }
+        .article-body table tr:nth-child(even) td { background: #f9fafb; }
+        .article-cta { background: #0f3460; color: #fff; padding: 32px; border-radius: 12px; text-align: center; margin: 40px 0; }
+        .article-cta h3 { color: #fff; margin-bottom: 12px; font-size: 20px; }
+        .article-cta p { color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+        .article-cta a { display: inline-block; background: #fff; color: #0f3460; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .key-point { background: #f0f4ff; border-left: 4px solid #0f3460; padding: 16px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        @media (max-width: 768px) { .article-header h1 { font-size: 24px; } .article-body { font-size: 15px; } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org", "@type": "Article",
+      "headline": "SAGMOTO Z3 Driveshaft Deep Dive: U-Joints, Slip Splines and Driveline Balance", "description": "SAGMOTO Z3 driveshaft deep dive: universal joints, slip splines, driveline angles and balancing for the 520HP Cummins M13 6x4 long haul tractor fleets.",
+      "author": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "url": "https://sagmoto-trucks.com/" },
+      "publisher": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "logo": { "@type": "ImageObject", "url": "https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png" } },
+      "datePublished": "2026-11-26", "dateModified": "2026-11-26",
+      "mainEntityOfPage": { "@type": "WebPage", "id": "https://sagmoto-trucks.com/blog/z3-driveshaft-deep-dive.html" }
+    }
+    </script>
+</head>
+<body>
+<div class="e_container-2 transparent">
+    <div class="header-inner">
+        <div class="logo-area">
+            <a href="../index.html">
+                <img src="../images/sagmoto-original/7c996f42-7545-43cf-b326-fff928aa4f57.png" alt="SAGMOTO" class="logo-dark" loading="lazy">
+                <img src="../images/sagmoto-original/45799ffa-90f5-4dc5-8fc1-f0dd10445b52.png" alt="SAGMOTO" class="logo-light" loading="lazy">
+            </a>
+        </div>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+        <ul class="main-nav">
+            <li><a href="../products.html">PRODUCTS</a></li>
+            <li><a href="javascript:;">APPLICATIONS</a></li>
+            <li><a href="../service.html">SERVICES</a></li>
+            <li><a href="index.html" style="font-weight:700;color:#0f3460;">BLOG</a></li>
+            <li><a href="../news_list/81163.html">NEWS</a></li>
+            <li><a href="../about.html">ABOUT US</a></li>
+        </ul>
+    </div>
+</div>
+<div class="article-container">
+    <div class="article-header">
+        <h1>SAGMOTO Z3 Driveshaft Deep Dive: U-Joints, Slip Splines and Driveline Balance</h1>
+        <div class="article-meta"><span>2026-11-26</span><span>Product Deep Dive</span><span>9 min read</span></div>
+    </div>
+    <div class="article-body">
+<p>A driveshaft looks like a simple steel tube, but on a high-torque tractor it is one of the most precisely engineered parts in the driveline. The SAGMOTO Z3 is a 6x4 long-haul tractor built around the Cummins M13 at 520 HP and 2,400 to 2,500 N m, coupled to a Fast 12 or 16-speed AMT and rated at 40 to 60 t GCW. All of that torque passes through a chain of propshafts between the gearbox and the drive bogie, turning at high speed while the suspension moves underneath. Universal joints, slip splines and careful balancing keep that power flow smooth; get any of them wrong and the truck vibrates, wears out joints early and eventually fails a shaft. This deep dive covers the joints, the angles, the balance and the service practice that keep a Z3 driveline intact.</p>
+
+<h2>Driveline layout on a 6x4 tractor</h2>
+<p>On the Z3 the gearbox output does not drive the axles directly. A short shaft runs from the gearbox to an intermediate support bearing mounted on the frame, then a second shaft runs from that bearing to the first drive axle, with a further short section reaching the rear axle through the inter-axle differential. Each section has universal joints at its ends, and the intermediate bearing carries the weight of the long shaft while allowing it to change angle as the frame flexes. Understanding this chain is important because a fault in one section often shows up as a vibration that appears to come from another.</p>
+<h2>Universal joints and their limits</h2>
+<p>A universal joint transmits torque between two shafts that meet at an angle. It consists of a cross, four bearing caps and yokes, and it allows rotation while the shaft angle changes with suspension travel. A single U-joint does not transmit speed uniformly; it speeds up and slows down twice per revolution, and that fluctuation is what creates vibration if the angles are wrong. The standard answer is the equal-angle rule: the angle at the gearbox end and the angle at the axle end should be the same, so the acceleration of one joint cancels the other and the output stays smooth.</p>
+<p>Wear in a U-joint starts in the needle bearings when the grease dries or the seal is damaged. A joint with play produces a clunk on take-up and a vibration under load, and continuing to run it can destroy the yoke. On the Z3 the joints work hard because the torque is high and the angles change constantly on a loaded route. Check them by supporting the shaft and moving the yoke in all directions; any radial play or roughness means replacement. Replace joints in pairs within a shaft section so that the driveline geometry stays consistent, and use a joint of the correct torque rating rather than a cheaper substitute.</p>
+
+<h2>Slip splines and length change</h2>
+<p>As the rear axle moves up and down over the road, the distance between the gearbox and the axle changes. A slip spline, usually at the gearbox end of a shaft, allows the tube to slide in and out to absorb that movement. It is a male-and-female splined joint packed with grease and sealed against dirt. On a tractor with leaf springs the travel can be significant, so the spline must have enough engaged length at full droop and must not bottom out at full bump. If the spline seizes, the movement is forced into the U-joints and the intermediate bearing, which then fail early.</p>
+<p>Spline wear appears as backlash that grows over time. A worn spline allows the shaft to shift under torque reversals, producing a clunk when the driver lifts off and reapplies power. Inspect the splines when the shaft is out, looking for polished bands, pitting or scoring on the flanks, and regrease with the specified lubricant on reassembly. Do not mix grease types, since incompatibility can cause the lubricant to break down. A spline that shows heavy wear should be replaced with the shaft section, because a new slip on a worn mating part will not last.</p>
+<div class="key-point"><strong>Key point:</strong> On a Z3 propshaft the two joint angles within a shaft section must match; if the gearbox-end angle and axle-end angle differ, even new universal joints will vibrate because one joint no longer cancels the other.</div>
+
+<h2>Driveline angles and the equal-angle rule</h2>
+<p>Getting the angles right is a measurement task, not a visual one. With the truck at its normal loaded ride height, measure the operating angle at each joint using an inclinometer on the shaft and on the mating flange. On a Z3 the working angles are usually kept small, often a few degrees, and the forward and rear joints within a shaft should be equal within a fraction of a degree. Changes in ride height from different tyre sizes, a lifted suspension or a worn spring pack all alter these angles, so the measurement must be taken in the as-built condition rather than from a brochure figure.</p>
+<p>Intermediate bearing alignment is part of the same check. If the support bearing sits too high or too low, the angles on both adjacent shafts are thrown off, and a bearing that is out of line also runs hot and wears quickly. Shims are used to correct the height, and the correct procedure is to measure, shim and measure again until the angles match. A driveline that is in balance and in angle is quiet at all speeds; one that is out will often be smooth at one speed and rough at another, which is the signature of an angle problem rather than a balance problem.</p>
+
+<h2>Balancing and vibration diagnosis</h2>
+<p>Balance faults produce a vibration whose frequency rises with road speed, usually felt in the cab floor or the seat rather than heard. A propshaft can lose balance from a dent, from a missing balance weight, from mud packed onto the tube or from a repair weld that added mass off centre. On a long-haul Z3 the shafts spin fast enough that a small imbalance creates a noticeable shake at cruise. Diagnosis starts by recording the speed at which the vibration is worst, then running the truck in gear at that speed and in neutral to see whether the vibration follows engine speed or road speed.</p>
+<p>A shaft that vibrates with road speed should be removed and checked for runout and balance on a machine, with the universal joints still fitted because they affect the result. Small corrections are made by welding on balance weights at a defined radius, and the work should be done by a shop with the right equipment. A shaft that is balanced in isolation but vibrates when installed usually has an angle or phasing problem instead. Keeping a record of the balance correction helps the next technician understand what was done and avoids repeating the same fix.</p>
+
+<h2>Phasing and assembly practice</h2>
+<p>Phasing describes the orientation of the yokes on a shaft. For a joint to cancel speed fluctuation, the yokes at the two ends of a shaft must be in phase, meaning their ears lie in the same plane. If a shaft is reassembled with a yoke turned by ninety degrees, the cancellation is lost and the truck vibrates under load even though the angles and balance are correct. This is a common mistake after a joint replacement and is easy to miss because the shaft looks normal when fitted. Mark the yoke positions before disassembly and match the marks on rebuild.</p>
+<p>Assembly also includes correct torque on the bearing cap bolts and the intermediate bearing mount. Bolts that are under-torqued allow the cap to fret and the joint to loosen; over-torquing can distort the cap and starve the bearing. Follow the torque value stated for the joint size and use new locking nuts where specified. After assembly, rotate the shaft by hand through its full travel to check for binding before the truck moves. A few minutes at the bench prevents a vibration fault that could otherwise take days to trace on the road.</p>
+
+<h2>Lubrication and service intervals</h2>
+<p>Universal joints and slip splines need regular lubrication, and this is the service item most often skipped. The interval depends on duty: a Z3 doing long nonstop highway legs accumulates fewer grease cycles than one working on a site with constant articulation. A sensible programme greases the joints and splines at every scheduled chassis service and more often in dusty or wet conditions. Grease should be pumped until fresh compound appears at the seal, which confirms that the old grease and contaminants have been purged rather than just pressed deeper into the bearing.</p>
+<p>The intermediate bearing is usually sealed and does not need greasing, but it should be checked for play and for rubber deterioration at its mount. A bearing with roughness or visible movement should be replaced before it heats up and damages the shaft. Keeping a simple log of greasing dates and shaft checks means a recurring vibration can be traced to a particular service gap. For reference on the powertrain behind the driveline, the <a href="../z3.html">Z3 tractor truck 520HP Cummins M13</a> page lists the engine and gearbox combinations that set the torque and flange specification for each build.</p>
+<div class="key-point"><strong>Key point:</strong> Purge old grease until fresh compound shows at each Z3 U-joint seal, because simply adding grease to a dry joint leaves the contaminated lubricant in the bearing and shortens its life.</div>
+
+<h2>Failure symptoms and inspection</h2>
+<p>Driveline faults announce themselves in recognizable ways. A clunk on power take-up points to spline backlash or a loose joint; a vibration that grows with speed suggests balance or angles; a rhythmic tick under load often means a dry or damaged U-joint bearing. An intermediate bearing that howls or runs hot is failing and should be changed promptly. Because these symptoms overlap, a structured inspection is better than guesswork: check angles, then phasing, then balance, then joint condition, in that order.</p>
+<table>
+<tr><th>Symptom</th><th>Likely cause</th><th>First check</th></tr>
+<tr><td>Clunk on take-up</td><td>Spline backlash or loose joint</td><td>Hand check off load</td></tr>
+<tr><td>Vibration with road speed</td><td>Balance or angle fault</td><td>Inclinometer reading</td></tr>
+<tr><td>Rhythmic tick under load</td><td>Dry U-joint bearing</td><td>Grease and play check</td></tr>
+<tr><td>Howling intermediate bearing</td><td>Bearing wear or misalignment</td><td>Runout and heat check</td></tr>
+</table>
+
+<h2>Specification checklist before a long-haul build</h2>
+<p>When specifying a Z3, ask the supplier to confirm the shaft sections, the joint torque ratings, the intermediate bearing position and the driveline angles at the loaded ride height. Record the tyre size and the fifth wheel height, since both change the flange angle and therefore the working angles. If the build includes a lift axle or nonstandard suspension, require a written driveline angle calculation before delivery.</p>
+<table>
+<tr><th>Check item</th><th>Method</th><th>Pass condition</th></tr>
+<tr><td>Joint angles</td><td>Inclinometer at loaded height</td><td>Equal within a fraction of a degree</td></tr>
+<tr><td>Yoke phasing</td><td>Marks aligned on rebuild</td><td>Ears in the same plane</td></tr>
+<tr><td>Spline backlash</td><td>Hand check off load</td><td>No visible step or clunk</td></tr>
+<tr><td>Shaft balance</td><td>Machine check with joints on</td><td>No runout or missing weights</td></tr>
+<tr><td>Greasing</td><td>Purge to fresh compound</td><td>At each scheduled service</td></tr>
+</table>
+<p>A driveline that is built to the correct angles, kept in phase and greased on schedule will run quietly for a long service life. The Z3 has the torque to work hard, and that is exactly why its joints and splines deserve attention.</p>
+    </div>
+    <div class="article-cta">
+        <h3>Tracing a Z3 Driveline Vibration?</h3>
+        <p>Tell us your tractor ride height, tyre size and where the vibration appears and we will check the shaft angles, phasing and joint specification. We can also outline a greasing schedule for your duty cycle.</p>
+        <a href="https://wa.me/8615319431311">Chat on WhatsApp</a>
+    </div>
+</div>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-main">
+            <div class="footer-col"><h3>PRODUCTS</h3><ul><li><a href="../products.html?cat=light">Light Duty</a></li><li><a href="../products.html?cat=medium">Medium Duty</a></li><li><a href="../products.html?cat=heavy">Heavy Duty</a></li><li><a href="../products.html?cat=offroad">Off-road</a></li></ul></div>
+            <div class="footer-col"><h3>RESOURCES</h3><ul><li><a href="index.html">Blog</a></li><li><a href="../news_list/81163.html">News</a></li><li><a href="../video_list.html">Videos</a></li></ul></div>
+            <div class="footer-col footer-contact"><h3>CONTACT US</h3><p class="hotline-number">+86 15319431311</p><p class="footer-email">sales@fenghan-trade.com</p></div>
+        </div>
+        <div class="footer-bottom"><div class="footer-copyright"><p>&copy;2026 Shaanxi Fenghan Trading Co., Ltd</p><p style="margin-top:6px;font-size:12px;">&#127760; Our Network: <a href="https://fenghan-trade.com/" target="_blank" rel="noopener" style="color:#C89B3C;">Fenghan Trade (SHACMAN/SAGMOTO)</a> &middot; <a href="https://dongfengevtrucks.com/" target="_blank" rel="noopener" style="color:#C89B3C;">EV Trucks — Dongfeng Electric</a></p></div></div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/whatsapp-float.js" async></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SAGMOTO i9 battery pack deep dive: 282 to 350 kWh LFP cells, BMS limits, state of charge window, thermal envelope, cycle life and high voltage safety.">
+    <meta name="keywords" content="SAGMOTO i9, LFP battery pack, 282-350 kWh, BMS, state of charge, thermal envelope, cell balancing, cycle life">
+    <meta property="og:title" content="SAGMOTO i9 Battery Pack Deep Dive: LFP Capacity, BMS Limits and Thermal Envelope">
+    <meta property="og:description" content="SAGMOTO i9 battery pack deep dive: 282 to 350 kWh LFP cells, BMS limits, state of charge window, thermal envelope, cycle life and high voltage safety.">
+    <meta property="og:image" content="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="geo.region" content="CN"/>
+    <meta name="geo.placename" content="Xi'an, Shaanxi, China"/>
+    <meta name="geo.position" content="34.3416;108.9398"/>
+    <link rel="canonical" href="https://sagmoto-trucks.com/blog/i9-battery-pack-deep-dive.html">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/app-pages.css">
+    <link rel="icon" href="https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png">
+    <title>SAGMOTO i9 Battery Pack Deep Dive: LFP Capacity, BMS Limits and Thermal Envelope | SAGMOTO Blog</title>
+    <style>
+        .article-container { max-width: 800px; margin: 80px auto 40px; padding: 0 20px; }
+        .article-header { margin-bottom: 40px; }
+        .article-header h1 { font-size: 32px; font-weight: 700; color: #1a1a2e; line-height: 1.3; margin-bottom: 16px; }
+        .article-meta { font-size: 13px; color: #999; display: flex; gap: 16px; flex-wrap: wrap; }
+        .article-body { font-size: 16px; line-height: 1.8; color: #333; }
+        .article-body h2 { font-size: 24px; font-weight: 700; color: #1a1a2e; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #f0f2f5; }
+        .article-body h3 { font-size: 20px; font-weight: 600; color: #333; margin: 28px 0 12px; }
+        .article-body p { margin-bottom: 16px; }
+        .article-body ul, .article-body ol { margin: 12px 0 20px 24px; }
+        .article-body li { margin-bottom: 8px; }
+        .article-body table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+        .article-body table th { background: #1a1a2e; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; }
+        .article-body table td { padding: 10px 14px; border-bottom: 1px solid #e8e8e8; }
+        .article-body table tr:nth-child(even) td { background: #f9fafb; }
+        .article-cta { background: #0f3460; color: #fff; padding: 32px; border-radius: 12px; text-align: center; margin: 40px 0; }
+        .article-cta h3 { color: #fff; margin-bottom: 12px; font-size: 20px; }
+        .article-cta p { color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+        .article-cta a { display: inline-block; background: #fff; color: #0f3460; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .key-point { background: #f0f4ff; border-left: 4px solid #0f3460; padding: 16px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        @media (max-width: 768px) { .article-header h1 { font-size: 24px; } .article-body { font-size: 15px; } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org", "@type": "Article",
+      "headline": "SAGMOTO i9 Battery Pack Deep Dive: LFP Capacity, BMS Limits and Thermal Envelope", "description": "SAGMOTO i9 battery pack deep dive: 282 to 350 kWh LFP cells, BMS limits, state of charge window, thermal envelope, cycle life and high voltage safety.",
+      "author": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "url": "https://sagmoto-trucks.com/" },
+      "publisher": { "@type": "Organization", "name": "Shaanxi Fenghan Trading Co., Ltd.", "logo": { "@type": "ImageObject", "url": "https://omo-oss-image.thefastimg.com/portal-saas/new2023032811535752050/cms/image/7c996f42-7545-43cf-b326-fff928aa4f57.png" } },
+      "datePublished": "2026-11-26", "dateModified": "2026-11-26",
+      "mainEntityOfPage": { "@type": "WebPage", "id": "https://sagmoto-trucks.com/blog/i9-battery-pack-deep-dive.html" }
+    }
+    </script>
+</head>
+<body>
+<div class="e_container-2 transparent">
+    <div class="header-inner">
+        <div class="logo-area">
+            <a href="../index.html">
+                <img src="../images/sagmoto-original/7c996f42-7545-43cf-b326-fff928aa4f57.png" alt="SAGMOTO" class="logo-dark" loading="lazy">
+                <img src="../images/sagmoto-original/45799ffa-90f5-4dc5-8fc1-f0dd10445b52.png" alt="SAGMOTO" class="logo-light" loading="lazy">
+            </a>
+        </div>
+        <div class="mobile-toggle"><span></span><span></span><span></span></div>
+        <ul class="main-nav">
+            <li><a href="../products.html">PRODUCTS</a></li>
+            <li><a href="javascript:;">APPLICATIONS</a></li>
+            <li><a href="../service.html">SERVICES</a></li>
+            <li><a href="index.html" style="font-weight:700;color:#0f3460;">BLOG</a></li>
+            <li><a href="../news_list/81163.html">NEWS</a></li>
+            <li><a href="../about.html">ABOUT US</a></li>
+        </ul>
+    </div>
+</div>
+<div class="article-container">
+    <div class="article-header">
+        <h1>SAGMOTO i9 Battery Pack Deep Dive: LFP Capacity, BMS Limits and Thermal Envelope</h1>
+        <div class="article-meta"><span>2026-11-26</span><span>Product Deep Dive</span><span>9 min read</span></div>
+    </div>
+    <div class="article-body">
+<p>A battery-electric heavy truck is defined by its pack more than by any other component. The SAGMOTO i9 is a 6x4 or 8x4 battery-electric truck in the 31 to 49 t class, with an electric motor in the region of 250 to 350 kW and an LFP battery between 282 and 350 kWh. That pack is the energy store, the largest single cost item and the part that determines range, payload and charging behaviour. Unlike a diesel truck, there is no exhaust aftertreatment or engine cooling circuit to consider here; the engineering questions are about cell chemistry, state of charge, thermal control and high-voltage safety. This deep dive explains how the i9 pack works and what a fleet should verify before putting electric trucks into service.</p>
+
+<h2>Why LFP chemistry is used</h2>
+<p>Lithium iron phosphate, usually shortened to LFP, is the dominant chemistry for heavy electric trucks, and the i9 uses it for a reason. Compared with nickel-based cells, LFP is thermally stable, tolerates high temperatures better and withstands many more charge cycles before its capacity fades. The trade-off is lower energy density, meaning a pack of a given capacity is heavier and larger. For a heavy truck where the battery is carried on a rigid chassis and payload matters, the safety and cycle-life advantages outweigh the mass penalty. A buyer should understand this trade because it shapes the range and payload conversation.</p>
+<p>LFP cells also hold their voltage fairly flat across much of their state of charge, which makes SOC estimation harder than the chemistry alone suggests. The battery management system has to work with coulomb counting and periodic recalibration rather than relying on voltage alone. This is not a weakness of the i9; it is a property of the chemistry that every well designed LFP pack manages. Ask the supplier how the pack is calibrated and at what state of charge a full reference point is established, because accurate SOC is what keeps a fleet from being stranded mid route.</p>
+
+<h2>Pack capacity and range planning</h2>
+<p>The i9 is offered with packs in the 282 to 350 kWh band. The useful energy is less than the nominal figure, because the battery management system reserves headroom at both ends of the charge range to protect the cells. For range planning, a fleet should work from usable kilowatt-hours, not the nameplate number, and should apply a consumption figure appropriate to the route. A heavy truck on rolling terrain may consume well over one kilowatt-hour per kilometre, so a 300 kWh pack with roughly 85 percent usable energy delivers a working range that must be matched to the charging stops available.</p>
+<p>Payload is the other side of the equation. A large pack adds mass, and on a 31 to 49 t truck that mass comes directly out of the load the vehicle can carry. The right capacity is therefore the smallest pack that covers the daily route with an acceptable charging margin. A fleet running a fixed short route with depot charging may find a smaller pack more economic, while one covering long intercity legs needs the upper end of the range. Model the duty cycle before choosing capacity, because the largest pack is not automatically the best purchase.</p>
+
+<h2>What the BMS actually controls</h2>
+<p>The battery management system is the pack's guardian and its accountant. It monitors cell voltage, pack current and temperature, estimates state of charge and state of health, and enforces limits that keep every cell inside its safe operating area. On the i9 the BMS communicates with the vehicle controller to limit motor power when the pack is cold, heavily discharged or near its thermal limit. It also manages contactors, so the high-voltage circuit is only closed when the system is healthy and the ignition sequence is valid. A fleet should treat the BMS as a safety system, not as a convenience feature.</p>
+<p>State of health reporting is particularly valuable for a commercial operator. It gives an indication of how much capacity the pack has lost relative to new, which feeds directly into residual value and range planning. Ask whether the truck reports state of health through the telematics platform and in what terms it is expressed. A pack with a clear, recorded health history is easier to value at resale than one with no data. The same records help identify a pack that is degrading faster than expected, which may point to a thermal or charging problem that can still be corrected.</p>
+<div class="key-point"><strong>Key point:</strong> On the i9, plan range from usable kilowatt-hours rather than the 282 to 350 kWh nameplate figure, because the BMS holds back charge at both ends of the window to protect cell life.</div>
+
+<h2>State of charge window and usable energy</h2>
+<p>The state of charge window is the band within which the pack is normally operated. Heavy LFP packs are rarely run from zero to full; a working window around ten to ninety percent is common, with the ends reserved as buffer. Running inside that window reduces stress on the cells and preserves cycle life, at the cost of some apparent range. A fleet that regularly deep-discharges the pack to squeeze out extra kilometres will shorten its life, so the vehicle should be specified and the route planned around the window rather than around the absolute maximum.</p>
+<h2>Cell balancing and why it matters</h2>
+<p>A pack is made of many cells in series, and the weakest cell determines when the whole pack stops charging or discharging. Cells drift apart over time because of small differences in temperature and internal resistance, so the BMS actively balances them. Passive systems bleed energy from the higher cells as heat during charging; active systems move energy between cells and are more efficient but more complex. On a heavy pack that cycles daily, effective balancing is what keeps usable capacity from falling faster than the chemistry itself would predict.</p>
+<h2>Thermal envelope and management</h2>
+<p>LFP cells like moderate temperatures. Charging a cold pack can cause lithium plating, while sustained high temperature accelerates degradation, so the i9 uses a liquid-based thermal management system to hold the pack within its working envelope. The system circulates coolant through channels in the pack, warming it before charging in cold weather and removing heat during fast charging or heavy discharge. The energy used for heating and cooling is part of the truck's consumption, so a fleet should account for a winter range penalty in cold climates.</p>
+<p>Thermal management also affects how quickly the truck can charge. A pack that is too cold or too hot will be limited by the BMS to protect the cells, so a depot that charges immediately after a run may see reduced power until the pack settles. Preconditioning the pack while it is still plugged in and drawing power from the grid rather than the battery is a useful practice. Ask whether the i9 supports scheduled preconditioning and how the driver is informed when the pack is outside its ideal temperature band.</p>
+
+<h2>Cycle life and degradation</h2>
+<p>Cycle life is measured in full equivalent cycles, and LFP packs used in commercial service commonly deliver well over a thousand cycles before capacity falls to a defined threshold. What matters in practice is not the laboratory number but the operating conditions. Shallow cycles within a narrow state of charge band, moderate temperatures and gentle charging all extend life, while deep discharges, high charge power and heat do the opposite. A fleet that treats the pack gently in its first years will see the benefit in both range retention and resale value.</p>
+<p>Degradation is gradual and measurable. Track energy consumed per kilometre and the reported state of health over time, using consistent routes so the comparison is fair. A sudden step change is more concerning than a slow trend, because it may indicate a cell or cooling fault rather than normal ageing. Keep the service records, since a documented history supports a warranty discussion if the pack falls outside the expected degradation curve. For the broader context of electric models in the range, the <a href="../new-energy.html">SAGMOTO new energy electric trucks</a> page shows how the battery-electric platforms are positioned.</p>
+<div class="key-point"><strong>Key point:</strong> Precondition the i9 pack while it is still connected to the charger, because pulling conditioning energy from the grid protects both the charging speed and the usable range on the next departure.</div>
+
+<h2>Insulation monitoring and high-voltage safety</h2>
+<p>A heavy electric truck carries a high-voltage system, and insulation monitoring is a continuous safety function. The BMS checks the resistance between the high-voltage conductors and the chassis, and will flag a fault or open the contactors if insulation falls below a safe threshold. Moisture, damaged cable glands and contaminated connectors are common causes, especially in wet or coastal operations. A fault here should never be cleared and ignored; it must be traced and repaired by a technician trained on high-voltage systems.</p>
+<p>Service procedures must respect the voltage. Technicians should follow lockout and de-energisation steps, verify isolation with the correct test equipment and use insulated tools where required. The orange high-voltage cabling and the service disconnect are there to make the system identifiable, but they do not remove the need for training. A fleet should confirm which service tasks can be done in-house and which require the supplier or a qualified electric vehicle workshop. This is an area where saving money by improvising carries a real safety cost.</p>
+
+<h2>Charging behaviour and depot planning</h2>
+<p>Charging an i9 is shaped by the pack limits. Power tapers as the pack fills, so the final portion of a charge takes longer than the first, and the BMS may cap power when the pack is cold or warm. Depot planning should use the real charge curve rather than the peak rating, because a charger advertised at a high figure will rarely deliver that average across a full session. Multiple trucks charging at once also introduce site load management, so the electrical supply should be sized around the simultaneous demand of the fleet.</p>
+<table>
+<tr><th>Charging practice</th><th>Effect on the pack</th><th>Fleet action</th></tr>
+<tr><td>Full power to 100 percent</td><td>Taper slows the final stage</td><td>Plan around real curve</td></tr>
+<tr><td>Cold pack charging</td><td>BMS caps power</td><td>Precondition first</td></tr>
+<tr><td>Multiple trucks at once</td><td>Site demand rises</td><td>Size supply correctly</td></tr>
+<tr><td>Frequent top-ups</td><td>Keeps cells mid window</td><td>Plug in when parked</td></tr>
+</table>
+
+<h2>Service, diagnostics and acceptance checks</h2>
+<p>Electric drivelines have fewer wear items than diesel ones, but the pack and its cooling system still need attention. Scheduled checks should cover coolant level and condition, connector integrity, insulation resistance readings and any BMS fault codes. Keep the cooling system service specific to the battery system rather than borrowing fluids or intervals from a diesel model. A diagnostic scan at each service gives a baseline that makes later faults easier to interpret.</p>
+<table>
+<tr><th>Pack parameter</th><th>Specification band</th><th>Fleet action</th></tr>
+<tr><td>Chemistry</td><td>LFP cells</td><td>Plan for stable, safe cycling</td></tr>
+<tr><td>Nominal capacity</td><td>282 to 350 kWh</td><td>Use usable energy for range</td></tr>
+<tr><td>Operating window</td><td>Roughly 10 to 90 percent SOC</td><td>Set minimum return charge</td></tr>
+<tr><td>Thermal control</td><td>Liquid heating and cooling</td><td>Precondition on grid power</td></tr>
+<tr><td>Safety</td><td>Insulation monitoring</td><td>Train technicians on isolation</td></tr>
+</table>
+<p>Before accepting an i9, confirm the pack capacity, the usable energy figure, the thermal system and the high-voltage service arrangements in writing. A battery-electric truck rewards a fleet that plans around the chemistry rather than treating it as a diesel with the engine removed.</p>
+    </div>
+    <div class="article-cta">
+        <h3>Planning an i9 Electric Fleet Route?</h3>
+        <p>Share your daily kilometres, load weight and depot charging setup and we will model usable pack energy, charging windows and the state of charge margin. We can also cover high voltage service training.</p>
+        <a href="https://wa.me/8615319431311">Chat on WhatsApp</a>
+    </div>
+</div>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-main">
+            <div class="footer-col"><h3>PRODUCTS</h3><ul><li><a href="../products.html?cat=light">Light Duty</a></li><li><a href="../products.html?cat=medium">Medium Duty</a></li><li><a href="../products.html?cat=heavy">Heavy Duty</a></li><li><a href="../products.html?cat=offroad">Off-road</a></li></ul></div>
+            <div class="footer-col"><h3>RESOURCES</h3><ul><li><a href="index.html">Blog</a></li><li><a href="../news_list/81163.html">News</a></li><li><a href="../video_list.html">Videos</a></li></ul></div>
+            <div class="footer-col footer-contact"><h3>CONTACT US</h3><p class="hotline-number">+86 15319431311</p><p class="footer-email">sales@fenghan-trade.com</p></div>
+        </div>
+        <div class="footer-bottom"><div class="footer-copyright"><p>&copy;2026 Shaanxi Fenghan Trading Co., Ltd</p><p style="margin-top:6px;font-size:12px;">&#127760; Our Network: <a href="https://fenghan-trade.com/" target="_blank" rel="noopener" style="color:#C89B3C;">Fenghan Trade (SHACMAN/SAGMOTO)</a> &middot; <a href="https://dongfengevtrucks.com/" target="_blank" rel="noopener" style="color:#C89B3C;">EV Trucks — Dongfeng Electric</a></p></div></div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/whatsapp-float.js" async></script>
+</body>
+</html>
